@@ -1,3 +1,4 @@
+export let page_ui_intro = `
 <div id="responsive" class="oc-area-limit">
 
     <!-- subject -->
@@ -620,3 +621,4 @@
         </textarea>
     <div class="oc-py-24"></div>
 </div>
+`

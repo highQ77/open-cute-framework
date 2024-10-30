@@ -2,6 +2,9 @@
 import { config } from './ocfw.config.js'
 import { template } from './ocfw.templates.js'
 import { func } from './ocfw.func.js'
+import { page_ui_intro } from './page/page_ui_intro.js'
+import { page_ui_design } from './page/page_ui_design.js'
+import { page_ui_playground } from './page/page_ui_playground.js'
 
 // css import
 let styleStr = `
@@ -385,42 +388,15 @@ window.addEventListener('DOMContentLoaded', winResize)
 window.addEventListener('load', winResize)
 
 
-// load html
-function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /* Loop through a collection of all HTML elements: */
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("html");
-        if (file) {
-            /* Make an HTTP request using the attribute value as the file name: */
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4) {
-                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                    /* Remove the attribute, and call this function once more: */
-                    elmnt.removeAttribute("html");
-                    includeHTML();
-                    requestAnimationFrame(updateUI)
-                    winResize()
-                }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /* Exit the function: */
-            return;
-        }
-    }
-}
-includeHTML()
+let r = document.getElementById('router')
+r.innerHTML = page_ui_intro
+updateUI()
 
-
-
-export {
+export let rc = {
+    winResize,
     updateUI,
-    includeHTML,
     dynamicTpl,
+    page_ui_intro,
+    page_ui_design,
+    page_ui_playground,
 }

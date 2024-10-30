@@ -1,3 +1,4 @@
+export let page_ui_design = `
 <div>
     <div class="oc-area oc-color-bg-black oc-color-txt-white">
         <div class="oc-fs-18 oc-p-16"><i class="bi bi-cup-hot-fill
@@ -36,3 +37,4 @@
     </div>
 
 </div>
+`

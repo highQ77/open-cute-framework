@@ -1,3 +1,4 @@
+export let page_ui_playground = `
 <div class="oc-area-limit">
     <div class="oc-area oc-py-24">
         <div>
@@ -14,3 +15,4 @@
         </div>
     </div>
 </div>
+`

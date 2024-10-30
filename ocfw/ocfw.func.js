@@ -1,12 +1,17 @@
-import { includeHTML, dynamicTpl, updateUI } from './ocfw.js'
+import { rc } from './ocfw.js'
 
 export let func = {
     routerLink(parent, ele, [params]) {
+        let pageId = params.split('/').pop().split('.')[0]
+
         let router = document.getElementById('router')
         router.innerHTML = ''
-        router.setAttribute('html', params)
-        includeHTML()
-        let pageId = params.split('/').pop().split('.')[0]
+
+        let r = document.getElementById('router')
+        r.innerHTML = rc[pageId]
+        rc.updateUI()
+        // router.setAttribute('html', params)
+
         let url = location.protocol + '//' + location.host + '/#/' + pageId
         location.href = url;
         [...ele.parentElement.children].forEach(link => {
@@ -16,6 +21,8 @@ export let func = {
                 link.style.setProperty('outline', '')
             }
         })
+
+        rc.winResize()
     },
     link(parent, ele, [params]) {
         window.open(params);
@@ -35,7 +42,7 @@ export let func = {
     },
     alertBox(parent, ele, params) {
         let [msg] = params
-        dynamicTpl(`<template class="alert_dialog" data-params="['${msg}']"></template>`)
+        rc.dynamicTpl(`<template class="alert_dialog" data-params="['${msg}']"></template>`)
     },
     confirmBoxClose(parent, ele, [params]) {
         let bool = eval(params)
@@ -44,13 +51,13 @@ export let func = {
     },
     confirmBox(parent, ele, params) {
         let [msg] = params
-        dynamicTpl(`<template class="confirm_dialog" data-params="['${msg}']"></template>`)
+        rc.dynamicTpl(`<template class="confirm_dialog" data-params="['${msg}']"></template>`)
     },
     runCode(parent, ele, params) {
         let [codeAreaID, codeResultID] = params
         let codeArea = document.getElementById(codeAreaID)
         let codeResult = document.getElementById(codeResultID)
         codeResult.innerHTML = codeArea.value
-        updateUI()
+        rc.updateUI()
     }
 }
