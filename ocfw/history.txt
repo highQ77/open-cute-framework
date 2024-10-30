@@ -1,8 +1,7 @@
 todolist: 
-> btn hover 
+> btn hover - ok
 > input text
 > input file
 > select
 > img
-
-2024.10.30 first commit
+> form

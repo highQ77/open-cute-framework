@@ -315,6 +315,13 @@ function tplprocess(tplDoc, parentElement) {
         dummy.children[0].setAttribute('id', tpl.id)
         // add class
         tpl.dataset.class && (dummy.children[0].className += ' ' + tpl.dataset.class)
+        // add hover
+        let ogClass = ''
+        let hoverClass = ''
+        if (tpl.dataset.hover) {
+            ogClass = dummy.children[0].className
+            hoverClass = dummy.children[0].className + ' ' + tpl.dataset.hover
+        }
         // add slot
         dummy.children[0].innerHTML = slot || dummy.children[0].innerHTML
         // replace element
@@ -323,6 +330,12 @@ function tplprocess(tplDoc, parentElement) {
 
         let resultElement = document.getElementById(tpl.id)
         parentElement = parentElement || resultElement;
+
+        // hover event
+        if (tpl.dataset.hover) {
+            resultElement.onmouseenter = () => { resultElement.className = hoverClass }
+            resultElement.onmouseleave = () => { resultElement.className = ogClass }
+        }
 
         // add event
         [...tpl.attributes].forEach(attr => {
