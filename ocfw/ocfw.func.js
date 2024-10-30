@@ -7,6 +7,9 @@ export let func = {
         router.setAttribute('html', params)
         includeHTML()
     },
+    link(parent, ele, [params]) {
+        window.open(params)
+    },
     simpleBtn(parent, ele, params) {
         alert('simpleBtn:' + params.join(','))
     },
