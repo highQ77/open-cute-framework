@@ -1,5 +1,7 @@
 import { rc } from './ocfw.js'
 
+let href = location.href
+
 export let func = {
     routerLink(parent, ele, [params]) {
         let pageId = params.split('/').pop().split('.')[0]
@@ -9,10 +11,9 @@ export let func = {
 
         let r = document.getElementById('router')
         r.innerHTML = rc[pageId]
-
         // router.setAttribute('html', params)
 
-        let url = location.protocol + '//' + location.host + '/open-cute-framework/#/' + pageId
+        let url = href + '/#/' + pageId
         location.href = url;
         [...ele.parentElement.children].forEach(link => {
             if (link == ele) {
