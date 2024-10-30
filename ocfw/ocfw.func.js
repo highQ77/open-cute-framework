@@ -9,10 +9,10 @@ export let func = {
 
         let r = document.getElementById('router')
         r.innerHTML = rc[pageId]
-        rc.updateUI()
+
         // router.setAttribute('html', params)
 
-        let url = location.protocol + '//' + location.host + '/#/' + pageId
+        let url = location.protocol + '//' + location.host + '/open-cute-framework/#/' + pageId
         location.href = url;
         [...ele.parentElement.children].forEach(link => {
             if (link == ele) {
@@ -21,7 +21,7 @@ export let func = {
                 link.style.setProperty('outline', '')
             }
         })
-
+        rc.updateUI()
         rc.winResize()
     },
     link(parent, ele, [params]) {
