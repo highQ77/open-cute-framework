@@ -1,4 +1,4 @@
-import { includeHTML, dynamicTpl } from './ocfw.js'
+import { includeHTML, dynamicTpl, updateUI } from './ocfw.js'
 
 export let func = {
     routerLink(parent, ele, [params]) {
@@ -46,4 +46,11 @@ export let func = {
         let [msg] = params
         dynamicTpl(`<template class="confirm_dialog" data-params="['${msg}']"></template>`)
     },
+    runCode(parent, ele, params) {
+        let [codeAreaID, codeResultID] = params
+        let codeArea = document.getElementById(codeAreaID)
+        let codeResult = document.getElementById(codeResultID)
+        codeResult.innerHTML = codeArea.value
+        updateUI()
+    }
 }
