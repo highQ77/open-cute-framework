@@ -1,38 +1,37 @@
 import { rc } from './ocfw.js'
 
-let href = location.href
-
 export let func = {
     routerLink(parent, ele, [params]) {
-        let pageId = params.split('/').pop().split('.')[0]
+
+        let pageId = ele.id
+
+        if (ele.children.length) {
+            let idx = [...ele.children].findIndex(e => e.id == pageId)
+            ele = ele.children[idx == -1 ? 0 : idx]
+            pageId = ele.id
+        }
+
+        let active = ele.parentElement;
+        [...active.children].forEach(link => {
+            if (link == ele) {
+                link.style.setProperty('outline', '4px solid yellow')
+            } else {
+                link.style.setProperty('outline', '')
+            }
+        })
+
+        if (ele.id.indexOf('http') > -1) {
+            window.open(ele.id)
+            return
+        }
 
         let router = document.getElementById('router')
-        router.innerHTML = ''
-
-        let r = document.getElementById('router')
-        r.innerHTML = rc[pageId]
-        // router.setAttribute('html', params)
-
-        let url = href + '/#/' + pageId
+        router.innerHTML = rc[pageId]
+        let path = (location.host == 'highq77.github.io' ? location.host + '/open-cute-framework' : location.host);
+        let url = location.protocol + '//' + path + '/#/' + pageId
         location.href = url;
-        [...ele.parentElement.children].forEach(link => {
-            if (link == ele) {
-                link.style.setProperty('outline', '4px solid yellow')
-            } else {
-                link.style.setProperty('outline', '')
-            }
-        })
+
         rc.updateUI()
-    },
-    link(parent, ele, [params]) {
-        window.open(params);
-        [...ele.parentElement.children].forEach(link => {
-            if (link == ele) {
-                link.style.setProperty('outline', '4px solid yellow')
-            } else {
-                link.style.setProperty('outline', '')
-            }
-        })
     },
     simpleBtn(parent, ele, params) {
         alert('simpleBtn:' + params.join(','))

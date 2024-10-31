@@ -346,6 +346,16 @@ function tplprocess(tplDoc, parentElement) {
             resultElement.onmouseleave = () => { resultElement.className = ogClass }
         }
 
+        // init event
+        if (tpl.dataset.init) {
+            let attrname = tpl.dataset.init.split('(')[0]
+            let params = eval(tpl.dataset.init.split('(')[1].split(')')[0].split(',').filter(i => i != '')).map(i => {
+                if (eval(i) instanceof Object) return eval(i)
+                return isNaN(parseFloat(i)) ? i.replace(/\'/ig, '') : parseFloat(i)
+            })
+            requestAnimationFrame(() => eval(func[attrname](parentElement, resultElement, params)))
+        }
+
         // add event
         [...tpl.attributes].forEach(attr => {
             if (attr.name.indexOf('on') > -1) {

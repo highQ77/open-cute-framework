@@ -5,8 +5,10 @@ import { checkbox_buttons } from './template/sample/checkbox_buttons.js'
 import { alert_dialog } from './template/sample/alert_dialog.js'
 import { confirm_dialog } from './template/sample/confirm_dialog.js'
 import { album_card } from './template/sample/album_card.js'
+import { router } from './template/sample/router.js'
 
 export const template = {
+    router,
     color_splitter,
     button,
     radio_buttons,
