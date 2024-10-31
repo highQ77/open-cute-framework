@@ -324,6 +324,9 @@ function tplprocess(tplDoc, parentElement) {
         dummy.children[0].setAttribute('id', tpl.id)
         // add class
         tpl.dataset.class && (dummy.children[0].className += ' ' + tpl.dataset.class)
+        // add active
+        tpl.dataset.active && (dummy.children[0].dataset.active = tpl.dataset.active)
+
         // add hover
         let ogClass = ''
         let hoverClass = ''
@@ -342,8 +345,15 @@ function tplprocess(tplDoc, parentElement) {
 
         // hover event
         if (tpl.dataset.hover) {
-            resultElement.onmouseenter = () => { resultElement.className = hoverClass }
-            resultElement.onmouseleave = () => { resultElement.className = ogClass }
+            // console.log(tpl.dataset.active)
+            resultElement.addEventListener('mouseenter', () => {
+                resultElement.className = resultElement.className.indexOf(parentElement.dataset.active) > -1 ? (hoverClass + ' ' + parentElement.dataset.active) : hoverClass;
+                // console.log('e', resultElement)
+            })
+            resultElement.addEventListener('mouseleave', () => {
+                resultElement.className = resultElement.className.indexOf(parentElement.dataset.active) > -1 ? (ogClass + ' ' + parentElement.dataset.active) : ogClass;
+                // console.log('l', resultElement)
+            })
         }
 
         // init event
@@ -366,7 +376,6 @@ function tplprocess(tplDoc, parentElement) {
                     return isNaN(parseFloat(i)) ? i.replace(/\'/ig, '') : parseFloat(i)
                 })
                 let event = func[attrname].bind(resultElement, parentElement, resultElement, params)
-                resultElement.removeEventListener(attr.name.slice(2), event)
                 resultElement.addEventListener(attr.name.slice(2), event)
                 // resultElement.setAttribute(attr.name, attr.value)
             }
@@ -394,10 +403,9 @@ let winResize = () => {
     ;[...document.getElementsByTagName('textarea')].forEach(tt => {
         let s = tt.value.trimEnd().indexOf('<')
         let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
-        tt.style.height = 0
-        tt.style.height = tt.scrollHeight + 'px'
-        tt.value = t.join('\n')
         tt.style.overflow = 'hidden'
+        tt.value = t.join('\n')
+        tt.style.height = tt.scrollHeight + 'px'
     })
 }
 // winResize()
