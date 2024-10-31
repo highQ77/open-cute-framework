@@ -353,7 +353,8 @@ function tplprocess(tplDoc, parentElement) {
                 if (eval(i) instanceof Object) return eval(i)
                 return isNaN(parseFloat(i)) ? i.replace(/\'/ig, '') : parseFloat(i)
             })
-            requestAnimationFrame(() => eval(func[attrname](parentElement, resultElement, params)))
+            let event = func[attrname].bind(resultElement, parentElement, resultElement, params)
+            requestAnimationFrame(event)
         }
 
         // add event
@@ -364,7 +365,7 @@ function tplprocess(tplDoc, parentElement) {
                     if (eval(i) instanceof Object) return eval(i)
                     return isNaN(parseFloat(i)) ? i.replace(/\'/ig, '') : parseFloat(i)
                 })
-                let event = () => eval(func[attrname](parentElement, resultElement, params))
+                let event = func[attrname].bind(resultElement, parentElement, resultElement, params)
                 resultElement.removeEventListener(attr.name.slice(2), event)
                 resultElement.addEventListener(attr.name.slice(2), event)
                 // resultElement.setAttribute(attr.name, attr.value)
