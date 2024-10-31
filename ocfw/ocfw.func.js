@@ -23,7 +23,6 @@ export let func = {
             }
         })
         rc.updateUI()
-        rc.winResize()
     },
     link(parent, ele, [params]) {
         window.open(params);
@@ -43,7 +42,7 @@ export let func = {
     },
     alertBox(parent, ele, params) {
         let [msg] = params
-        rc.dynamicTpl(`<template class="alert_dialog" data-params="['${msg}']"></template>`)
+        rc.appendTpl(`<template class="alert_dialog" data-params="['${msg}']"></template>`)
     },
     confirmBoxClose(parent, ele, [params]) {
         let bool = eval(params)
@@ -52,7 +51,7 @@ export let func = {
     },
     confirmBox(parent, ele, params) {
         let [msg] = params
-        rc.dynamicTpl(`<template class="confirm_dialog" data-params="['${msg}']"></template>`)
+        rc.appendTpl(`<template class="confirm_dialog" data-params="['${msg}']"></template>`)
     },
     runCode(parent, ele, params) {
         let [codeAreaID, codeResultID] = params

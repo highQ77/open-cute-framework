@@ -51,7 +51,7 @@ bpKeys.forEach((bp, idx) => {
 
     // breakpoints info
     if (config.show_breakpoints_info)
-        str += `body::before {content:'${bp.toLocaleUpperCase()}-${bpmin}~${bpmax}';position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px}`
+        str += `body::before {content:'${bp.toLocaleUpperCase()}-${bpmin}~${bpmax}';position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px; left:45px;}`
 
     /* ********************************** layout ************************************** */
     // layout vertical
@@ -297,7 +297,13 @@ const style = document.createElement('style')
 style.textContent = styleStr
 document.body.append(style)
 config.debug && document.body.classList.add('oc-debug')
-
+if (config.show_breakpoints_info) {
+    const ww = document.createElement('div')
+    ww.style = 'position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px;width:45px;}'
+    ww.innerHTML = window.innerWidth
+    window.addEventListener('resize', () => ww.innerHTML = window.innerWidth)
+    document.body.append(ww)
+}
 
 // ================================================================================================================================== //
 
@@ -361,9 +367,10 @@ function tplprocess(tplDoc, parentElement) {
 
 function updateUI() {
     tplprocess([...document.getElementsByTagName('template')])
+    winResize()
 }
 
-function dynamicTpl(html) {
+function appendTpl(html) {
     let div = document.createElement('div')
     document.body.append(div)
     div.outerHTML = html
@@ -393,9 +400,8 @@ r.innerHTML = page_ui_intro
 updateUI()
 
 export let rc = {
-    winResize,
     updateUI,
-    dynamicTpl,
+    appendTpl,
     page_ui_intro,
     page_ui_design,
     page_ui_playground,
