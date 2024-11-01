@@ -34,3 +34,7 @@
 .oc-z-index-dialog {
     z-index: 100;
 }
+
+.oc-overflow-hidden {
+    overflow: hidden !important;
+}
