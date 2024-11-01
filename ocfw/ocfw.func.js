@@ -4,6 +4,7 @@ export let func = {
     pushUrl(href) {
         history.pushState({}, '', href);
         window.dispatchEvent(new Event('popstate'));
+        rc.updateUI()
     },
     routerLink(parent, ele, params) {
 
@@ -51,7 +52,6 @@ export let func = {
         let path = (location.host == 'highq77.github.io' ? location.host + '/open-cute-framework' : location.host);
         let url = location.protocol + '//' + path + '/#/' + pageId
         func.pushUrl(url)
-        rc.updateUI()
     },
     simpleBtn(parent, ele, params) {
         alert('simpleBtn:' + params.join(','))

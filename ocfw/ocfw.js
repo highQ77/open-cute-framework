@@ -64,11 +64,20 @@ bpKeys.forEach((bp, idx) => {
 
     /* ********************************** html element spacing ************************************** */
     let spacing_level = config.spacing_level
-    let width_percentage = config.width_percentage
+    let gap = config.gap
+
+    // opacity-class ex: sm--oc-op-10 (10%)
+    for (let i = 0; i < gap.length; i++) {
+        let val = gap[i]
+        str += `.${bp}--oc-op-${val} {opacity:${val / 100};}`
+        if (bpKeys.length - 1 == idx) {
+            ocstr += `.oc-op-${val} {opacity:${val / 100};}`
+        }
+    }
 
     // width-class ex: sm--oc-w-25 (%) / oc-w-20 (%) / oc-w-auto
-    for (let i = 0; i < width_percentage.length; i++) {
-        let percentage = width_percentage[i]
+    for (let i = 0; i < gap.length; i++) {
+        let percentage = gap[i]
         if (percentage == 'auto') {
             str += `.${bp}--oc-wp-${percentage} {width:${percentage} !important;}`
             str += `.${bp}--oc-min-wp-${percentage} {min-width:${percentage} !important;}`
@@ -322,6 +331,8 @@ function tplprocess(tplDoc, parentElement) {
         dummy.innerHTML = ele.html(params)
         // add id
         dummy.children[0].setAttribute('id', tpl.id)
+        // add style
+        dummy.children[0].setAttribute('style', tpl.style)
         // add class
         tpl.dataset.class && (dummy.children[0].className += ' ' + tpl.dataset.class)
         // add active
@@ -354,6 +365,17 @@ function tplprocess(tplDoc, parentElement) {
                 resultElement.className = resultElement.className.indexOf(parentElement.dataset.active) > -1 ? (ogClass + ' ' + parentElement.dataset.active) : ogClass;
                 // console.log('l', resultElement)
             })
+        }
+
+        // add src
+        if (tpl.dataset.src) {
+            resultElement.style.backgroundImage = `url('${tpl.dataset.src}')`;
+            if (tpl.dataset.size) {
+                if (tpl.dataset.size == 'full')
+                    resultElement.style.backgroundSize = '100% 100%'
+                else
+                    resultElement.style.backgroundSize = tpl.dataset.size
+            }
         }
 
         // init event

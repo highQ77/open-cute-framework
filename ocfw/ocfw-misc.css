@@ -1,7 +1,15 @@
 /* design by william77 */
 
 .oc-cursor {
-    cursor: pointer;
+    cursor: pointer !important;
+}
+
+.oc-pos-rel {
+    position: relative;
+}
+
+.oc-pos-abs {
+    position: absolute;
 }
 
 /* ********************************** z-index ************************************** */

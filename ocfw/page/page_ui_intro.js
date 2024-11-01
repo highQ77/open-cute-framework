@@ -620,5 +620,59 @@ export let page_ui_intro = `
             </div>
         </textarea>
     <div class="oc-py-24"></div>
+
+    <!-- ex6 -->
+    <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example6 - select</div>
+    <div class="oc-bdl-1 oc-pl-4 oc-p-8">
+        <div class="oc-fs-11">select</div>
+    </div>
+    <div class="oc-py-8">
+        <template class="select" data-params="['運動 execise','吃飯 eat','睡覺 sleep']"></template>
+    </div>
+    <textarea class="oc-wp-100 oc-p-8">
+        <div class="oc-py-8">
+            <template class="select" data-params="['運動 execise','吃飯 eat','睡覺 sleep']"></template>
+        </div>
+    </textarea>
+    <div class="oc-py-24"></div>
+
+    <!-- ex7 -->
+    <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example7 - image</div>
+    <div class="oc-bdl-1 oc-pl-4 oc-p-8">
+        <div class="oc-fs-11">data-src = image source</div>
+        <div class="oc-fs-11">data-size = image bakcground-size style </div>
+    </div>
+    <div class="oc-area oc-py-8">
+        <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="auto">
+            <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Auto</div>
+        </template>
+        <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="cover">
+            <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Cover</div>
+        </template>
+        <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="contain">
+            <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Contain</div>
+        </template>
+        <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="full">
+            <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Full</div>
+        </template>
+    </div>
+    <textarea class="oc-wp-100 oc-p-8">
+        <div class="oc-area oc-py-8">
+            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="auto">
+                <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Auto</div>
+            </template>
+            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="cover">
+                <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Cover</div>
+            </template>
+            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="contain">
+                <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Contain</div>
+            </template>
+            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="full">
+                <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Full</div>
+            </template>
+        </div>
+    </textarea>
+    <div class="oc-py-24"></div>
+
 </div>
 `
