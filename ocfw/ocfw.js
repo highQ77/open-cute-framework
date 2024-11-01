@@ -241,6 +241,21 @@ bpKeys.forEach((bp, idx) => {
         }
     }
 
+    // left, top, right, bottom (px)
+    for (let i = 0; i < spacing_level.length; i++) {
+        let spacing = spacing_level[i]
+        str += `.${bp}--oc-pos-l-${spacing} {left:${spacing}px;}`
+        str += `.${bp}--oc-pos-t-${spacing} {top:${spacing}px;}`
+        str += `.${bp}--oc-pos-r-${spacing} {right:${spacing}px;}`
+        str += `.${bp}--oc-pos-b-${spacing} {bottom:${spacing}px;}`
+        if (bpKeys.length - 1 == idx) {
+            ocstr += `.oc-pos-l-${spacing} {left:${spacing}px;}`
+            ocstr += `.oc-pos-t-${spacing} {top:${spacing}px;}`
+            ocstr += `.oc-pos-r-${spacing} {right:${spacing}px;}`
+            ocstr += `.oc-pos-b-${spacing} {bottom:${spacing}px;}`
+        }
+    }
+
     /* ************************************** font ************************************** */
 
     // font size
@@ -325,14 +340,15 @@ function tplprocess(tplDoc, parentElement) {
         let slot = tpl.innerHTML
         // pass params
         let params = tpl.dataset.params ? eval(tpl.dataset.params) : null
-        // dummy for content
+        // dummy for content, and slot
         let dummy = document.createElement('div')
         tpl.id = tpl.id || `${Date.now()}_tpl_id_${idx}_${Math.random()}`
-        dummy.innerHTML = ele.html(params)
+        dummy.innerHTML = slot ? ele.html(params).replace(/\[slot\]/ig, slot) : ele.html(params)
+
         // add id
         dummy.children[0].setAttribute('id', tpl.id)
         // add style
-        dummy.children[0].setAttribute('style', tpl.style)
+        tpl.style && dummy.children[0].setAttribute('style', tpl.style)
         // add class
         tpl.dataset.class && (dummy.children[0].className += ' ' + tpl.dataset.class)
         // add active
@@ -345,8 +361,7 @@ function tplprocess(tplDoc, parentElement) {
             ogClass = dummy.children[0].className
             hoverClass = dummy.children[0].className + ' ' + tpl.dataset.hover
         }
-        // add slot
-        dummy.children[0].innerHTML = slot || dummy.children[0].innerHTML
+
         // replace element
         tpl.outerHTML = dummy.innerHTML
         dummy.remove()
@@ -356,14 +371,11 @@ function tplprocess(tplDoc, parentElement) {
 
         // hover event
         if (tpl.dataset.hover) {
-            // console.log(tpl.dataset.active)
             resultElement.addEventListener('mouseenter', () => {
                 resultElement.className = resultElement.className.indexOf(parentElement.dataset.active) > -1 ? (hoverClass + ' ' + parentElement.dataset.active) : hoverClass;
-                // console.log('e', resultElement)
             })
             resultElement.addEventListener('mouseleave', () => {
                 resultElement.className = resultElement.className.indexOf(parentElement.dataset.active) > -1 ? (ogClass + ' ' + parentElement.dataset.active) : ogClass;
-                // console.log('l', resultElement)
             })
         }
 
@@ -404,6 +416,9 @@ function tplprocess(tplDoc, parentElement) {
         })
         // nest child process
         tplprocess([...resultElement.getElementsByTagName('template')], resultElement)
+
+        // js handle
+        ele.js && ele.js(resultElement)
     })
 }
 
@@ -427,7 +442,7 @@ let winResize = () => {
         let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
         tt.style.overflow = 'hidden'
         tt.value = t.join('\n')
-        tt.style.height = tt.scrollHeight + 'px'
+        tt.style.minHeight = tt.scrollHeight + 'px'
     })
 }
 // winResize()

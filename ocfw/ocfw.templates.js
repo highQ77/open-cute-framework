@@ -8,6 +8,7 @@ import { album_card } from './template/sample/album_card.js'
 import { router } from './template/sample/router.js'
 import { image } from './template/sample/image.js'
 import { select } from './template/sample/select.js'
+import { slider } from './template/sample/slider.js'
 
 export const template = {
     router,
@@ -20,4 +21,5 @@ export const template = {
     album_card,
     image,
     select,
+    slider
 }

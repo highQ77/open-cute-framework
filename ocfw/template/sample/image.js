@@ -1,7 +1,7 @@
 export let image = {
     html() {
         return `
-            <div></div>
+            <div>[slot]</div>
         `
     },
 }

@@ -4,6 +4,14 @@
     cursor: pointer !important;
 }
 
+.oc-pointer-event-none {
+    pointer-events: none;
+}
+
+.oc-pointer-event-all {
+    pointer-events: all;
+}
+
 .oc-pos-rel {
     position: relative;
 }

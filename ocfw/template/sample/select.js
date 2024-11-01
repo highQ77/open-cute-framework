@@ -18,5 +18,3 @@ export let select = {
         `
     },
 }
-
-// this.previousSibling.innerText=this.value+' ▼'
