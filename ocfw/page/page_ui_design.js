@@ -1,8 +1,7 @@
 export let page_ui_design = `
 <div>
     <div class="oc-area oc-color-bg-black oc-color-txt-white">
-        <div class="oc-fs-18 oc-p-16"><i class="bi bi-cup-hot-fill
-            oc-fs-24 oc-mr-8"></i>Album</div>
+        <div class="oc-fs-18 oc-p-16">𖣐 Album</div>
         <div class="oc-right oc-middle oc-fs-11 oc-p-16">
             參考自 Bootstrap > Custom Components > Album
         </div>

@@ -8,11 +8,7 @@ import { page_ui_playground } from './page/page_ui_playground.js'
 
 // css import
 let styleStr = `
-    @import url(./ocfw/ocfw-normalize.css);
-    @import url(./ocfw/ocfw-layout.css);
-    @import url(./ocfw/ocfw-misc.css);
-    @import url(./ocfw/bootstrap-icons/font/bootstrap-icons.min.css);
-
+    ${config.css_import.map(css => `@import url(${css});`).join('')}
     :root {
         /* the gutter of rows and columns */
         --oc-layout-gutter: ${config.layout_gutter}px;

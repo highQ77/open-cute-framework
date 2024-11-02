@@ -3,8 +3,7 @@ export let page_ui_intro = `
 
     <!-- subject -->
     <div class="oc-pt-64 oc-fs-18">
-        <i class="bi bi-cup-hot-fill
-            oc-fs-24 oc-mr-8"></i>Flex-Based Responsive Layout System
+        𖣐 Flex-Based Responsive Layout System
     </div>
     <div class="oc-py-24"></div>
 
@@ -270,7 +269,7 @@ export let page_ui_intro = `
 <div id="color" class="oc-area-limit">
     <!-- subject -->
     <div class="oc-pt-64 oc-fs-18">
-        <i class="bi bi-cup-hot-fill oc-fs-24 oc-mr-8"></i>Color Definition
+        𖣐 Color Definition
     </div>
     <div class="oc-py-24"></div>
 
@@ -306,7 +305,7 @@ export let page_ui_intro = `
 <div id="spacing" class="oc-area-limit">
     <!-- subject -->
     <div class="oc-pt-64 oc-fs-18">
-        <i class="bi bi-cup-hot-fill oc-fs-24 oc-mr-8"></i>Spacing Definition
+        𖣐 Spacing Definition
     </div>
     <div class="oc-py-24"></div>
 
@@ -518,7 +517,7 @@ export let page_ui_intro = `
 <div id="ui" class="oc-area-limit">
     <!-- subject -->
     <div class="oc-pt-64 oc-fs-18">
-        <i class="bi bi-cup-hot-fill oc-fs-24 oc-mr-8"></i>Essential UI Component Definition
+        𖣐 Essential UI Component Definition
     </div>
     <div class="oc-py-24"></div>
 
@@ -678,17 +677,17 @@ export let page_ui_intro = `
 
 <template class="color_splitter"></template>
 
-<div id="pui" class="oc-area-limit">
+<div id="advui" class="oc-area-limit">
     <!-- subject -->
     <div class="oc-pt-64 oc-fs-18">
-        <i class="bi bi-cup-hot-fill oc-fs-24 oc-mr-8"></i>Premiere UI Component Definition
+        𖣐 Advanced UI Component Definition
     </div>
     <div class="oc-py-24"></div>
 
     <!-- ex1 -->
     <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - slider</div>
     <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-        advance component
+        advanced component
     </div>
     <div class="oc-py-8">
         <template class="slider" data-params="[['slide01','sayhi02','run03'],['./img/test.png','./img/test2.png','./img/test3.png']]"></template>

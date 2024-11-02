@@ -10,6 +10,12 @@ export let config = {
     area_limit: 1200,
     // area children default height
     area_children_default_height: 8,
+    css_import: [
+        './ocfw/ocfw-normalize.css',
+        './ocfw/ocfw-layout.css',
+        './ocfw/ocfw-misc.css',
+        // './ocfw/bootstrap-icons/font/bootstrap-icons.min.css',
+    ],
     // breakpoints settings
     breakpoints: {
         xs: { min: 0, max: 576 },

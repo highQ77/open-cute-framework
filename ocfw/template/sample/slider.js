@@ -17,8 +17,8 @@ export let slider = {
                     <div class="oc-pos-abs oc-wp-100 oc-pos-t-0">
                         <div class="oc-area oc-area-v">
                             <div class="oc-area oc-wp-100 oc-h-640">
-                                <div class="oc-left oc-middle"><div class="sliderLeft oc-color-txt-white oc-op-50 oc-color-bg-black oc-p-24 oc-m-8 oc-r-16 oc-fs-24 oc-cursor">&lt;</div></div>
-                                <div class="oc-right oc-middle"><div class="sliderRight oc-color-txt-white oc-op-50 oc-color-bg-black oc-p-24 oc-m-8 oc-r-16 oc-fs-24 oc-cursor">&gt;</div></div>
+                                <div class="oc-left oc-middle"><div class="sliderLeft oc-color-txt-white oc-op-50 oc-color-bg-black oc-p-24 oc-m-8 oc-r-16 oc-fs-24 oc-cursor">❮</div></div>
+                                <div class="oc-right oc-middle"><div class="sliderRight oc-color-txt-white oc-op-50 oc-color-bg-black oc-p-24 oc-m-8 oc-r-16 oc-fs-24 oc-cursor">❯</div></div>
                             </div>
                             <div class="sliderDots oc-pos-abs oc-center oc-bottom oc-wp-100 oc-h-640 oc-pb-32 oc-pointer-event-none">
                                 ${titles.map(t => `<div class="oc-w-16 oc-h-16 oc-r-80 oc-m-8 oc-color-bg-white oc-pointer-event-all oc-cursor"></div>`).join('')}
