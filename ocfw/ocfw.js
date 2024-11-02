@@ -2,9 +2,7 @@
 import { config } from './ocfw.config.js'
 import { template } from './ocfw.templates.js'
 import { func } from './ocfw.func.js'
-import { page_ui_intro } from './page/page_ui_intro.js'
-import { page_ui_design } from './page/page_ui_design.js'
-import { page_ui_playground } from './page/page_ui_playground.js'
+import { html } from './ocfw.html.js'
 
 // css import
 let styleStr = `
@@ -47,7 +45,7 @@ bpKeys.forEach((bp, idx) => {
 
     // breakpoints info
     if (config.show_breakpoints_info)
-        str += `body::before {content:'${bp.toLocaleUpperCase()}-${bpmin}~${bpmax}';position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px; left:45px;}`
+        str += `body::before {content:'${bp.toLocaleUpperCase()}-${bpmin}~${bpmax}';position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px; left:45px;z-index:99999;}`
 
     /* ********************************** layout ************************************** */
     // layout vertical
@@ -310,21 +308,6 @@ bpKeys.forEach((bp, idx) => {
     loopTimes++;
 })
 
-
-
-styleStr += ocstr
-const style = document.createElement('style')
-style.textContent = styleStr
-document.body.append(style)
-config.debug && document.body.classList.add('oc-debug')
-if (config.show_breakpoints_info) {
-    const ww = document.createElement('div')
-    ww.style = 'position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px;width:45px;}'
-    ww.innerHTML = window.innerWidth
-    window.addEventListener('resize', () => ww.innerHTML = window.innerWidth)
-    document.body.append(ww)
-}
-
 // ================================================================================================================================== //
 
 /* ************************************** template engine ************************************** */
@@ -446,15 +429,27 @@ let winResize = () => {
 window.addEventListener('DOMContentLoaded', winResize)
 window.addEventListener('load', winResize)
 
-
-let r = document.getElementById('router')
-r.innerHTML = page_ui_intro
+// all style
+styleStr += ocstr
+const style = document.createElement('style')
+style.textContent = styleStr
+// debug mode
+config.debug && document.body.classList.add('oc-debug')
+// apply index html
+document.body.innerHTML = html.page_ui_index
+document.body.append(style)
+// show breakpoints info
+if (config.show_breakpoints_info) {
+    const ww = document.createElement('div')
+    ww.style = 'position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px;width:45px;}'
+    ww.innerHTML = window.innerWidth
+    window.addEventListener('resize', () => ww.innerHTML = window.innerWidth)
+    document.body.append(ww)
+}
 updateUI()
 
 export let rc = {
     updateUI,
     appendTpl,
-    page_ui_intro,
-    page_ui_design,
-    page_ui_playground,
+    html
 }

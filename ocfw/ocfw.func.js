@@ -48,7 +48,7 @@ export let func = {
         }
 
         let router = document.getElementById('router')
-        router.innerHTML = rc[pageId]
+        router.innerHTML = rc.html[pageId]
         let path = (location.host == 'highq77.github.io' ? location.host + '/open-cute-framework' : location.host);
         let url = location.protocol + '//' + path + '/#/' + pageId
         func.pushUrl(url)

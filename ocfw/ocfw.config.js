@@ -10,6 +10,7 @@ export let config = {
     area_limit: 1200,
     // area children default height
     area_children_default_height: 8,
+    // css import
     css_import: [
         './ocfw/ocfw-normalize.css',
         './ocfw/ocfw-layout.css',
