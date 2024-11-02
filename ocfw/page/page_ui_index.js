@@ -1,7 +1,7 @@
 export let page_ui_index = `
  <main style="min-height: calc(100vh - 48px);">
     <!-- title info -->
-    <div class="oc-area oc-color-bg-primary2">
+    <div class="oc-area oc-color-bg-primary2 oc-px-24">
         <div class="oc-my-56 oc-p-8 oc-area-limit">
             <h1 class="oc-fs-30">Open Cute Framework <b class="oc-fs-13 oc-my-8">開源實驗框架</b>
             </h1>
