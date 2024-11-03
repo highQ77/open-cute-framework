@@ -1,11 +1,6 @@
 import { rc } from './ocfw.js'
 
 export let func = {
-    pushUrl(href) {
-        history.pushState({}, '', href);
-        window.dispatchEvent(new Event('popstate'));
-        rc.updateUI()
-    },
     routerLink(parent, ele, params) {
 
         let pageId = ele.id
@@ -23,14 +18,11 @@ export let func = {
             ele = ele.children[idx == -1 ? 0 : idx]
             pageId = ele.id
             func.routerLink(null, document.getElementById(pageId), null)
-            let currentHref = location.href
-            window.addEventListener('popstate', () => {
-                if (currentHref != location.href) {
-                    currentHref = location.href
-                    let pageId = location.href.split('/#/')[1]
-                    func.routerLink(null, document.getElementById(pageId), null)
-                }
-            });
+            window.onpopstate = function (event) {
+                // console.log("location: " + document.location);
+                let pageId = location.href.split('/#/')[1]
+                func.routerLink(null, document.getElementById(pageId), true)
+            }
             return
         }
 
@@ -49,9 +41,13 @@ export let func = {
 
         let router = document.getElementById('router')
         router.innerHTML = rc.html[pageId]
-        let path = (location.host == 'highq77.github.io' ? location.host + '/open-cute-framework' : location.host);
-        let url = location.protocol + '//' + path + '/#/' + pageId
-        func.pushUrl(url)
+        rc.updateUI()
+        if (!params) {
+            let path = (location.host == 'highq77.github.io' ? location.host + '/open-cute-framework' : location.host);
+            let url = location.protocol + '//' + path + '/#/' + pageId
+            history.pushState({}, '', url);
+            window.dispatchEvent(new Event('popstate'));
+        }
     },
     simpleBtn(parent, ele, params) {
         alert('simpleBtn:' + params.join(','))

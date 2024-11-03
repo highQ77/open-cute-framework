@@ -32,7 +32,7 @@ export let page_ui_demo = `
             CSS RWD 設計除了 layout 以外，其他屬性如字級也可以配置 RWD 效果
         </template>
         <template class="album_card" data-params="'路由設計'">
-            有簡易的 Router 機制 (仍在設計中)
+            有簡易的 Router 機制 (優化中)
         </template>
         <template class="album_card" data-params="'設計準則'">
             (仍在設計中)
