@@ -20,6 +20,14 @@
     position: absolute;
 }
 
+.oc-hidden {
+    overflow: hidden;
+}
+
+.oc-txt-center {
+    text-align: center;
+}
+
 /* ********************************** z-index ************************************** */
 
 .oc-cover {

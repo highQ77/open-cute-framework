@@ -1,19 +1,7 @@
 export let page_ui_intro = `
 <div>
 
-    <div class="oc-area-limit oc-mt-56">
-        <ol class="oc-p-32 oc-color-bg-primary1 oc-r-16">
-            <li>React / Vue / Angular 以外的新選擇</li>
-            <li>適合開發開源的專案、學生專案、網站原型、行銷網站、非機敏性高的網站使用</li>
-            <li>此框架設計為快速生成 Design Guideline 與 prototype 的工具</li>
-            <li>快速開發不用編譯直接預覽 (推薦使用 VSCode Live Server)</li>
-            <li>組件化系統，組建可分享減少反覆造輪</li>
-            <li>CSS RWD 設計除了 layout 以外，其他屬性也可以配置 RWD 效果，譬如不同斷點不同字級顯示</li>
-            <li>有簡易的 Router 機制</li>
-        </ol>
-    </div>
-
-    <div id="responsive" class="oc-area-limit">
+    <div id="responsive" class="oc-area-limit oc-mt-16">
 
         <!-- subject -->
         <div class="oc-pt-64 oc-fs-18 oc-middle">
@@ -719,7 +707,7 @@ export let page_ui_intro = `
             advanced component
         </div>
         <div class="oc-py-8">
-            <template class="carousel" data-params="320">
+            <template class="carousel" data-params="320" data-class="oc-r-32 oc-hidden">
                 <template class="image" data-src="./img/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">slide01</div>
                 </template>
@@ -732,7 +720,7 @@ export let page_ui_intro = `
             </template>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-            <template class="carousel" data-params="320">
+            <template class="carousel" data-params="320" data-class="oc-r-32 oc-hidden">
                 <template class="image" data-src="./img/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">slide01</div>
                 </template>

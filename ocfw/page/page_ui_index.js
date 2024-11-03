@@ -15,7 +15,7 @@ export let page_ui_index = `
                 <template class="router" data-class="oc-right oc-area" data-init="routerLink()" data-active="activeStyle">
                     <template id="page_ui_demo" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
-                        data-hover="oc-bd-4 oc-color-bd-orange">demo</template>
+                        data-hover="oc-bd-4 oc-color-bd-orange">features</template>
                     <template id="page_ui_intro" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">intro</template>

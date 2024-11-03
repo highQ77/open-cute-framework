@@ -4,7 +4,7 @@ export let page_ui_playground = `
         <div class="oc-area oc-py-24">
             <div>
                 <template class="button" onclick="runCode('codearea','coderesult')"
-                    data-class="oc-color-bg-primary4 oc-color-txt-white">Run code</template>
+                    data-class="oc-color-bg-primary4 oc-color-txt-white" data-hover="oc-bd-4 oc-color-bd-orange">Run code</template>
             </div>
         </div>
         <div class="oc-area">
