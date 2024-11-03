@@ -3,7 +3,7 @@ export let page_ui_intro = `
     <div id="responsive" class="oc-area-limit oc-mt-16">
 
         <!-- playground -->
-        <div class="oc-color-bg-primary1 oc-p-16 oc-mt-56 oc-r-16 oc-bd-1">
+        <div class="oc-color-bg-primary1 oc-p-16 oc-mt-56 oc-r-16 oc-box-shadow">
             <div class="oc-area oc-py-24">
                 <div class="oc-fs-24">Playground  <div class="oc-fs-10">press runcode button to show result</div></div>
                 <div class="oc-right">
@@ -14,9 +14,13 @@ export let page_ui_intro = `
             <div class="oc-area oc-area-v">
                 <textarea id="codearea" class="oc-p-4 oc-color-bg-primary4 oc-color-txt-white oc-h-320 oc-min-h-320">
                     <div class="oc-py-8 oc-area">
-                        <div class="oc-bd-1">1/3</div>
-                        <div class="oc-bd-1">1/3</div>
-                        <div class="oc-bd-1">1/3</div>
+                        <div class="oc-bd-1 oc-color-bg-orange">1/3</div>
+                        <div class="oc-bd-1 oc-color-bg-orange">1/3</div>
+                        <div class="oc-bd-1 oc-color-bg-orange">1/3</div>
+                    </div>
+                    <div class="oc-py-8">
+                        <template class="button" onclick="alertBox('cool test 1')">alert-box-1</template>
+                        <template class="button" onclick="alertBox('cool test 2 cool test 2 cool test 2 cool test 2 cool test 2 cool test 2')">alert-box-2</template>
                     </div>
                 </textarea>
                 <div id="coderesult" class="oc-p-4 oc-bd-1">
@@ -44,12 +48,12 @@ export let page_ui_intro = `
             <div class="oc-bd-1">1/3</div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-                <div class="oc-py-8 oc-area">
-                    <div class="oc-bd-1">1/3</div>
-                    <div class="oc-bd-1">1/3</div>
-                    <div class="oc-bd-1">1/3</div>
-                </div>
-            </textarea>
+            <div class="oc-py-8 oc-area">
+                <div class="oc-bd-1">1/3</div>
+                <div class="oc-bd-1">1/3</div>
+                <div class="oc-bd-1">1/3</div>
+            </div>
+        </textarea>
         <div class="oc-py-24"></div>
 
         <!-- ex2 -->
@@ -70,19 +74,19 @@ export let page_ui_intro = `
             <div class="oc-bd-1">10/10</div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-                <div class="oc-py-8 oc-area oc-area-split-4">
-                    <div class="oc-bd-1">1/10</div>
-                    <div class="oc-bd-1">2/10</div>
-                    <div class="oc-bd-1">3/10</div>
-                    <div class="oc-bd-1">4/10</div>
-                    <div class="oc-bd-1">5/10</div>
-                    <div class="oc-bd-1">6/10</div>
-                    <div class="oc-bd-1">7/10</div>
-                    <div class="oc-bd-1">8/10</div>
-                    <div class="oc-bd-1">9/10</div>
-                    <div class="oc-bd-1">10/10</div>
-                </div>
-            </textarea>
+            <div class="oc-py-8 oc-area oc-area-split-4">
+                <div class="oc-bd-1">1/10</div>
+                <div class="oc-bd-1">2/10</div>
+                <div class="oc-bd-1">3/10</div>
+                <div class="oc-bd-1">4/10</div>
+                <div class="oc-bd-1">5/10</div>
+                <div class="oc-bd-1">6/10</div>
+                <div class="oc-bd-1">7/10</div>
+                <div class="oc-bd-1">8/10</div>
+                <div class="oc-bd-1">9/10</div>
+                <div class="oc-bd-1">10/10</div>
+            </div>
+        </textarea>
         <div class="oc-py-24"></div>
 
         <!-- ex3 -->
@@ -97,45 +101,45 @@ export let page_ui_intro = `
             <div class="oc-bd-1 oc-1">3/3</div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-                <div class="oc-py-8 oc-area">
-                    <div class="oc-bd-1 oc-1">1/3</div>
-                    <div class="oc-bd-1 oc-10">2/3</div>
-                    <div class="oc-bd-1 oc-1">3/3</div>
-                </div>
-            </textarea>
+            <div class="oc-py-8 oc-area">
+                <div class="oc-bd-1 oc-1">1/3</div>
+                <div class="oc-bd-1 oc-10">2/3</div>
+                <div class="oc-bd-1 oc-1">3/3</div>
+            </div>
+        </textarea>
         <div class="oc-py-24"></div>
 
         <!-- ex4 -->
         <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example4 - 12 columns / 12欄分配設計</div>
-        <div class="oc-py-8 oc-area">
-            <div class="oc-bd-1">1/12</div>
-            <div class="oc-bd-1">2/12</div>
-            <div class="oc-bd-1">3/12</div>
-            <div class="oc-bd-1">4/12</div>
-            <div class="oc-bd-1">5/12</div>
-            <div class="oc-bd-1">6/12</div>
-            <div class="oc-bd-1">7/12</div>
-            <div class="oc-bd-1">8/12</div>
-            <div class="oc-bd-1">9/12</div>
-            <div class="oc-bd-1">10/12</div>
-            <div class="oc-bd-1">11/12</div>
-            <div class="oc-bd-1">12/12</div>
-        </div>
-        <textarea class="oc-wp-100 oc-p-8">
-                <div class="oc-py-8 oc-area">
-                    <div class="oc-bd-1">1/12</div>
-                    <div class="oc-bd-1">2/12</div>
-                    <div class="oc-bd-1">3/12</div>
-                    <div class="oc-bd-1">4/12</div>
-                    <div class="oc-bd-1">5/12</div>
-                    <div class="oc-bd-1">6/12</div>
-                    <div class="oc-bd-1">7/12</div>
-                    <div class="oc-bd-1">8/12</div>
-                    <div class="oc-bd-1">9/12</div>
-                    <div class="oc-bd-1">10/12</div>
-                    <div class="oc-bd-1">11/12</div>
-                    <div class="oc-bd-1">12/12</div>
-                </div>
+            <div class="oc-py-8 oc-area">
+                <div class="oc-bd-1">1/12</div>
+                <div class="oc-bd-1">2/12</div>
+                <div class="oc-bd-1">3/12</div>
+                <div class="oc-bd-1">4/12</div>
+                <div class="oc-bd-1">5/12</div>
+                <div class="oc-bd-1">6/12</div>
+                <div class="oc-bd-1">7/12</div>
+                <div class="oc-bd-1">8/12</div>
+                <div class="oc-bd-1">9/12</div>
+                <div class="oc-bd-1">10/12</div>
+                <div class="oc-bd-1">11/12</div>
+                <div class="oc-bd-1">12/12</div>
+            </div>
+            <textarea class="oc-wp-100 oc-p-8">
+                    <div class="oc-py-8 oc-area">
+                        <div class="oc-bd-1">1/12</div>
+                        <div class="oc-bd-1">2/12</div>
+                        <div class="oc-bd-1">3/12</div>
+                        <div class="oc-bd-1">4/12</div>
+                        <div class="oc-bd-1">5/12</div>
+                        <div class="oc-bd-1">6/12</div>
+                        <div class="oc-bd-1">7/12</div>
+                        <div class="oc-bd-1">8/12</div>
+                        <div class="oc-bd-1">9/12</div>
+                        <div class="oc-bd-1">10/12</div>
+                        <div class="oc-bd-1">11/12</div>
+                        <div class="oc-bd-1">12/12</div>
+                    </div>
             </textarea>
         <div class="oc-py-24"></div>
 
@@ -152,12 +156,12 @@ export let page_ui_intro = `
             <div class="oc-bd-1 xs--oc-12 sm--oc-6 md--oc-3 lg--oc-4">xs--oc-12 sm--oc-6 md--oc-3 lg--oc-4</div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-                <div class="oc-py-8 oc-area">
-                    <div class="oc-bd-1 xs--oc-12 sm--oc-3 md--oc-6 lg--oc-4">xs--oc-12 sm--oc-3 md--oc-6 lg--oc-4</div>
-                    <div class="oc-bd-1 xs--oc-12 sm--oc-3 md--oc-3 lg--oc-4">xs--oc-12 sm--oc-3 md--oc-3 lg--oc-4</div>
-                    <div class="oc-bd-1 xs--oc-12 sm--oc-6 md--oc-3 lg--oc-4">xs--oc-12 sm--oc-6 md--oc-3 lg--oc-4</div>
-                </div>
-            </textarea>
+            <div class="oc-py-8 oc-area">
+                <div class="oc-bd-1 xs--oc-12 sm--oc-3 md--oc-6 lg--oc-4">xs--oc-12 sm--oc-3 md--oc-6 lg--oc-4</div>
+                <div class="oc-bd-1 xs--oc-12 sm--oc-3 md--oc-3 lg--oc-4">xs--oc-12 sm--oc-3 md--oc-3 lg--oc-4</div>
+                <div class="oc-bd-1 xs--oc-12 sm--oc-6 md--oc-3 lg--oc-4">xs--oc-12 sm--oc-6 md--oc-3 lg--oc-4</div>
+            </div>
+        </textarea>
         <div class="oc-py-24"></div>
 
         <!-- ex6 -->

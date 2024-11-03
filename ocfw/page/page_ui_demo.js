@@ -15,7 +15,7 @@ export let page_ui_demo = `
         </div>
     </div>
     
-    <div class="oc-area oc-p-24 oc-area-split-3">
+    <div class="oc-area oc-p-56 oc-area-split-3">
         <template class="album_card" data-params="'程式碼無需編譯'">
             目前快速開發不用編譯直接預覽 (推薦使用 VSCode Live Server)
         </template>
