@@ -28,6 +28,10 @@
     text-align: center;
 }
 
+.oc-box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
 /* ********************************** z-index ************************************** */
 
 .oc-cover {
@@ -41,8 +45,4 @@
 
 .oc-z-index-dialog {
     z-index: 100;
-}
-
-.oc-overflow-hidden {
-    overflow: hidden !important;
 }

@@ -28,7 +28,7 @@ export let page_ui_demo = `
         <template class="album_card" data-params="'Slot 插槽'">
             組件內部設計加上[slot]關鍵字, 可將組件標籤內容全部取代至關鍵字上
         </template>
-        <template class="album_card" data-params="'響應式樣式表'">
+        <template class="album_card" data-params="'響應式樣式'">
             CSS RWD 設計除了 layout 以外，其他屬性如字級也可以配置 RWD 效果
         </template>
         <template class="album_card" data-params="'路由設計'">

@@ -3,7 +3,7 @@ export let carousel = {
         return `
             <div class="oc-area">
                 <div class="oc-pos-rel">
-                    <div class="oc-h-640 oc-wp-100 oc-overflow-hidden oc-pos-rel">
+                    <div class="oc-h-640 oc-wp-100 oc-hidden oc-pos-rel">
                         <div class="carouselContent oc-pos-abs oc-h-640 oc-wp-100 oc-pointer-event-none" style="transition:left 1s;">
                             [slot]
                         </div>
