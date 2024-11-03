@@ -3,7 +3,7 @@ export let page_ui_design = `
     <div class="oc-area oc-color-bg-black oc-color-txt-white">
         <div class="oc-fs-18 oc-p-16">𖣐 Album</div>
         <div class="oc-right oc-middle oc-fs-11 oc-p-16">
-            參考自 Bootstrap > Custom Components > Album
+            版面設計參考自 Bootstrap > Custom Components > Album
         </div>
     </div>
     <div class="oc-area oc-area-v">
@@ -18,8 +18,8 @@ export let page_ui_design = `
             </div>
         </div>
         <div class="oc-center oc-p-40">
-            <template class="button" data-class="oc-mr-4">Main call to action</template>
-            <template class="button" data-class="oc-color-bg-primary4 oc-color-txt-white">Secondary action</template>
+            <template class="button" data-class="oc-w-160 oc-mr-4">Main call to action</template>
+            <template class="button" data-class="oc-w-160 oc-color-bg-primary4 oc-color-txt-white">Secondary action</template>
         </div>
     </div>
     <div class="oc-area oc-px-24 oc-area-split-3">

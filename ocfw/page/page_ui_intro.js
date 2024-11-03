@@ -1,10 +1,23 @@
 export let page_ui_intro = `
-<div class="oc-px-24">
+<div>
+
+    <div class="oc-area-limit">
+        <ol class="oc-p-24">
+            <li>React / Vue / Angular 以外的新選擇</li>
+            <li>適合開發開源的專案、學生專案、網站原型、行銷網站、非機敏性高的網站使用</li>
+            <li>快速開發不用編譯直接預覽 (推薦使用 VSCode Live Server)</li>
+            <li>組件化系統，組建可分享減少反覆造輪</li>
+            <li>CSS RWD 設計除了 layout 以外，其他屬性也可以配置 RWD 效果，譬如不同斷點不同字級顯示</li>
+            <li>有 Router 機制</li>
+            <li>Author William77</li>
+        </ol>
+    </div>
+
     <div id="responsive" class="oc-area-limit">
 
         <!-- subject -->
-        <div class="oc-pt-64 oc-fs-18">
-            𖣐 Flex-Based Responsive Layout System
+        <div class="oc-pt-64 oc-fs-18 oc-middle">
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Flex-Based Responsive Layout System
         </div>
         <div class="oc-py-24"></div>
 
@@ -269,8 +282,8 @@ export let page_ui_intro = `
 
     <div id="color" class="oc-area-limit">
         <!-- subject -->
-        <div class="oc-pt-64 oc-fs-18">
-            𖣐 Color Definition
+        <div class="oc-pt-64 oc-fs-18 oc-middle">
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Color Definition
         </div>
         <div class="oc-py-24"></div>
 
@@ -305,8 +318,8 @@ export let page_ui_intro = `
 
     <div id="spacing" class="oc-area-limit">
         <!-- subject -->
-        <div class="oc-pt-64 oc-fs-18">
-            𖣐 Spacing Definition
+        <div class="oc-pt-64 oc-fs-18 oc-middle">
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Spacing Definition
         </div>
         <div class="oc-py-24"></div>
 
@@ -517,8 +530,8 @@ export let page_ui_intro = `
 
     <div id="ui" class="oc-area-limit">
         <!-- subject -->
-        <div class="oc-pt-64 oc-fs-18">
-            𖣐 Essential UI Component Definition
+        <div class="oc-pt-64 oc-fs-18 oc-middle">
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Essential UI Component Definition
         </div>
         <div class="oc-py-24"></div>
 
@@ -637,7 +650,22 @@ export let page_ui_intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex7 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example7 - image</div>
+        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example7 - toggle</div>
+        <div class="oc-bdl-1 oc-pl-4 oc-p-8">
+            <div class="oc-fs-11">toggle</div>
+        </div>
+        <div class="oc-py-8">
+            <template class="toggle" data-params="['toggle','tv']"></template>
+        </div>
+        <textarea class="oc-wp-100 oc-p-8">
+            <div class="oc-py-8">
+                 <template class="toggle" data-params="['toggle','tv']"></template>
+            </div>
+        </textarea>
+        <div class="oc-py-24"></div>
+
+        <!-- ex8 -->
+        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example8 - image</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
             <div class="oc-fs-11">data-src = image source</div>
             <div class="oc-fs-11">data-size = image bakcground-size style </div>
@@ -680,8 +708,8 @@ export let page_ui_intro = `
 
     <div id="advui" class="oc-area-limit">
         <!-- subject -->
-        <div class="oc-pt-64 oc-fs-18">
-            𖣐 Advanced UI Component Definition
+        <div class="oc-pt-64 oc-fs-18 oc-middle">
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Advanced UI Component Definition
         </div>
         <div class="oc-py-24"></div>
 

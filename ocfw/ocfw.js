@@ -16,7 +16,6 @@ let styleStr = `
         --oc-area-children-default-height: ${config.area_children_default_height}px;
     }
 `
-// ================================================================================================================================== //
 
 // different breakpoints settings
 let loopTimes = 0
@@ -424,8 +423,6 @@ let winResize = () => {
         tt.style.minHeight = tt.scrollHeight + 'px'
     })
 }
-// winResize()
-// window.addEventListener('resize', winResize)
 window.addEventListener('DOMContentLoaded', winResize)
 window.addEventListener('load', winResize)
 
@@ -447,6 +444,13 @@ if (config.show_breakpoints_info) {
     document.body.append(ww)
 }
 updateUI()
+
+// test
+window.onclick = e => {
+    window.onclick = null
+    console.log(e.pageY)
+    //window.scrollTo(0, 7700)
+}
 
 export let rc = {
     updateUI,

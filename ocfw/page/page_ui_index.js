@@ -1,23 +1,12 @@
 export let page_ui_index = `
  <main style="min-height: calc(100vh - 48px);">
     <!-- title info -->
-    <div class="oc-area oc-color-bg-primary2 oc-px-24">
-        <div class="oc-my-56 oc-p-8 oc-area-limit">
-            <h1 class="oc-fs-30">Open Cute Framework <b class="oc-fs-13 oc-my-8">開源實驗框架</b>
+    <div class="oc-area oc-area-limit">
+        <div class="oc-py-56">
+            <h1 class="oc-fs-30">Open Cute Framework <b class="oc-fs-13 oc-my-8">開源實驗框架
             </h1>
-
-            <div class="oc-area-limit">
-                <ol class="oc-p-24">
-                    <li>React / Vue / Angular 以外的新選擇</li>
-                    <li>適合開發開源的專案、學生專案、網站原型、行銷網站、非機敏性高的網站使用</li>
-                    <li>快速開發不用編譯直接預覽 (推薦使用 VSCode Live Server)</li>
-                    <li>組件化系統，組建可分享減少反覆造輪</li>
-                    <li>CSS RWD 設計除了 layout 以外，其他屬性也可以配置 RWD 效果，譬如不同斷點不同字級顯示</li>
-                    <li>有 Router 機制</li>
-                    <li>Author William77</li>
-                </ol>
-            </div>
-
+        </div>
+        <div class="oc-py-56">
             <style>
                 .activeStyle {
                     outline: 4px solid yellow;
@@ -39,8 +28,6 @@ export let page_ui_index = `
             </template>
         </div>
     </div>
-
-    <template class="color_splitter"></template>
 
     <div id="router"></div>
 
