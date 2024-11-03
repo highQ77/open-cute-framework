@@ -1,5 +1,5 @@
 export let page_ui_index = `
- <main style="min-height: calc(100vh - 48px);">
+<main style="min-height: calc(100vh - 48px);">
     <!-- title info -->
     <div class="oc-py-80 animate-bg">
         <div class="oc-area oc-area-limit">

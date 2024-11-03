@@ -29,7 +29,7 @@ export let config = {
     },
     // 12 grid system (do not change this value)
     page_columns: 12,
-    // width percentage
+    // percentage
     gap: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 'auto'],
     // all sapcing relate values (you can change it)
     spacing_level: [0, 1, 2, 3, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 120, 160, 240, 320, 640],

@@ -13,10 +13,6 @@ export let page_ui_demo = `
                 <div class="oc-txt-center">適合開發開源的專案、設計準則 Design Guideline、原型 Prototype</div>
             </div>
         </div>
-        <!--<div class="oc-center oc-p-40">
-            <template class="button" data-class="oc-w-160 oc-mr-4">Main call to action</template>
-            <template class="button" data-class="oc-w-160 oc-color-bg-primary4 oc-color-txt-white">Secondary action</template>
-        </div>-->
     </div>
     
     <div class="oc-area oc-p-24 oc-area-split-3">
@@ -24,10 +20,13 @@ export let page_ui_demo = `
             目前快速開發不用編譯直接預覽 (推薦使用 VSCode Live Server)
         </template>
         <template class="album_card" data-params="'組件化系統'">
-            透過 template 標籤使用組建，且支援巢狀 template 設計
+            透過 template 標籤使用組件，且支援巢狀 template 設計
         </template>
         <template class="album_card" data-params="'參數傳遞'">
-            透過 data-params 傳遞參數至組建內部設計使用
+            透過 data-params 傳遞參數至組件內部設計使用
+        </template>
+        <template class="album_card" data-params="'Slot 插槽'">
+            組件內部設計加上[slot]關鍵字, 可將組件標籤內容全部取代至關鍵字上
         </template>
         <template class="album_card" data-params="'響應式樣式表'">
             CSS RWD 設計除了 layout 以外，其他屬性如字級也可以配置 RWD 效果
