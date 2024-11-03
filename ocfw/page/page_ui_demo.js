@@ -1,7 +1,7 @@
-export let page_ui_design = `
+export let page_ui_demo = `
 <div>
     <div class="oc-area oc-color-bg-black oc-color-txt-white">
-        <div class="oc-fs-18 oc-p-16">𖣐 Album</div>
+        <div class="oc-fs-18 oc-p-16 oc-middle"><span class="oc-fs-36 oc-mr-8">𖣐</span> RWD Demo Site</div>
         <div class="oc-right oc-middle oc-fs-11 oc-p-16">
             版面設計參考自 Bootstrap > Custom Components > Album
         </div>

@@ -396,7 +396,7 @@ function tplprocess(tplDoc, parentElement) {
         tplprocess([...resultElement.getElementsByTagName('template')], resultElement)
 
         // js handle
-        ele.js && ele.js(resultElement)
+        ele.js && ele.js(resultElement, params)
     })
 }
 

@@ -8,7 +8,7 @@ import { confirm_dialog } from './template/sample/confirm_dialog.js'
 import { album_card } from './template/sample/album_card.js'
 import { image } from './template/sample/image.js'
 import { select } from './template/sample/select.js'
-import { slider } from './template/sample/slider.js'
+import { carousel } from './template/sample/carousel.js'
 import { toggle } from './template/sample/toggle.js'
 
 export const template = {
@@ -22,6 +22,6 @@ export const template = {
     album_card,
     image,
     select,
-    slider,
+    carousel,
     toggle,
 }

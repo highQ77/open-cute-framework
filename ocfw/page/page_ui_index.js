@@ -9,18 +9,18 @@ export let page_ui_index = `
             <div>
                 <style>
                     .activeStyle {
-                        outline: 4px solid yellow;
+                        outline: 2px solid yellow;
                     }
                 </style>
-                <template class="router" data-class="oc-right" data-init="routerLink()" data-active="activeStyle">
+                <template class="router" data-class="oc-right oc-area" data-init="routerLink()" data-active="activeStyle">
+                    <template id="page_ui_demo" class="button"
+                        data-class="oc-color-bg-primary4 oc-color-txt-white"
+                        data-hover="oc-bd-4 oc-color-bd-orange">demo</template>
                     <template id="page_ui_intro" class="button"
-                        data-class="oc-color-bg-primary4 oc-color-txt-white oc-mr-4"
-                        data-hover="oc-bd-4 oc-color-bd-orange">home</template>
-                    <template id="page_ui_design" class="button"
-                        data-class="oc-color-bg-primary4 oc-color-txt-white oc-mr-4"
-                        data-hover="oc-bd-4 oc-color-bd-orange">design</template>
+                        data-class="oc-color-bg-primary4 oc-color-txt-white"
+                        data-hover="oc-bd-4 oc-color-bd-orange">intro</template>
                     <template id="page_ui_playground" class="button"
-                        data-class="oc-color-bg-primary4 oc-color-txt-white oc-mr-4"
+                        data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">playground</template>
                     <template id="https://github.com/highQ77/open-cute-framework" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"

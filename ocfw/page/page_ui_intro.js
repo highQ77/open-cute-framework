@@ -714,15 +714,35 @@ export let page_ui_intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - slider</div>
+        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - carousel</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
             advanced component
         </div>
         <div class="oc-py-8">
-            <template class="slider" data-params="[['slide01','sayhi02','run03'],['./img/test.png','./img/test2.png','./img/test3.png']]"></template>
+            <template class="carousel" data-params="320">
+                <template class="image" data-src="./img/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
+                    <div class="oc-color-txt-white oc-fs-72">slide01</div>
+                </template>
+                <template class="image" data-src="./img/test2.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-left oc-top" data-size="cover">
+                    <div class="oc-color-txt-white oc-fs-72">sayhi02</div>
+                </template>
+                <template class="image" data-src="./img/test3.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-right oc-bottom" data-size="cover">
+                    <div class="oc-color-txt-white oc-fs-72">run03</div>
+                </template>
+            </template>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-            <template class="slider" data-params="[['slide01','sayhi02','run03'],['./img/test.png','./img/test2.png','./img/test3.png']]"></template>
+            <template class="carousel" data-params="320">
+                <template class="image" data-src="./img/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
+                    <div class="oc-color-txt-white oc-fs-72">slide01</div>
+                </template>
+                <template class="image" data-src="./img/test2.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-left oc-top" data-size="cover">
+                    <div class="oc-color-txt-white oc-fs-72">sayhi02</div>
+                </template>
+                <template class="image" data-src="./img/test3.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-right oc-bottom" data-size="cover">
+                    <div class="oc-color-txt-white oc-fs-72">run03</div>
+                </template>
+            </template>
         </textarea>
         <div class="oc-py-24"></div>
 
