@@ -1,7 +1,29 @@
 export let page_ui_intro = `
 <div>
-
     <div id="responsive" class="oc-area-limit oc-mt-16">
+
+        <!-- playground -->
+        <div class="oc-color-bg-primary1 oc-p-16 oc-mt-56 oc-r-16 oc-bd-1">
+            <div class="oc-area oc-py-24">
+                <div class="oc-fs-24">Playground  <div class="oc-fs-10">press runcode button to show result</div></div>
+                <div class="oc-right">
+                    <template class="button" onclick="runCode('codearea','coderesult')"
+                        data-class="oc-color-bg-primary4 oc-color-txt-white" data-hover="oc-bd-4 oc-color-bd-orange">Run code</template>
+                </div>
+            </div>
+            <div class="oc-area oc-area-v">
+                <textarea id="codearea" class="oc-p-4 oc-color-bg-primary4 oc-color-txt-white oc-h-320 oc-min-h-320">
+                    <div class="oc-py-8 oc-area">
+                        <div class="oc-bd-1">1/3</div>
+                        <div class="oc-bd-1">1/3</div>
+                        <div class="oc-bd-1">1/3</div>
+                    </div>
+                </textarea>
+                <div id="coderesult" class="oc-p-4 oc-bd-1">
+                    result is here
+                </div>
+            </div>
+        </div>
 
         <!-- subject -->
         <div class="oc-pt-64 oc-fs-18 oc-middle">

@@ -19,9 +19,9 @@ export let page_ui_index = `
                     <template id="page_ui_intro" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">intro</template>
-                    <template id="page_ui_playground" class="button"
+                    <!--<template id="page_ui_playground" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
-                        data-hover="oc-bd-4 oc-color-bd-orange">playground</template>
+                        data-hover="oc-bd-4 oc-color-bd-orange">playground</template>-->
                     <template id="https://github.com/highQ77/open-cute-framework" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">github</template>
