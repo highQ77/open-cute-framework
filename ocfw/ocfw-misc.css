@@ -24,6 +24,10 @@
     overflow: hidden;
 }
 
+.oc-scroll {
+    overflow: scroll;
+}
+
 .oc-txt-center {
     text-align: center;
 }

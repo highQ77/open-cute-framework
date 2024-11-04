@@ -1,7 +1,5 @@
 todolist: 
-> btn hover - ok
 > input text
 > input file
-> select / opacity
-> img - ok
 > form
+> level-2 router

@@ -1,10 +1,6 @@
 export let page_ui_demo = `
 <div>
-    <div class="oc-area oc-color-bg-black oc-color-txt-white">
-        <div class="oc-fs-18 oc-p-16 oc-middle"><span class="oc-fs-36 oc-mr-8">𖣐</span> Features</div>
-        <div class="oc-right oc-middle oc-fs-11 oc-p-16">
-        </div>
-    </div>
+    
     <div class="oc-area oc-area-v">
         <div class="oc-center oc-fs-30 oc-py-48 oc-mt-40">Open Cute Framework</div>
         <div class="oc-center oc-fs-18 oc-px-24">

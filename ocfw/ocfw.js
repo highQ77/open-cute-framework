@@ -165,13 +165,13 @@ bpKeys.forEach((bp, idx) => {
         if (bpKeys.length - 1 == idx) {
             ocstr += `.oc-p-${spacing} {padding:${spacing}px;}`
         }
-        str += `.${bp}--oc-px-${spacing} {padding:0 ${spacing}px;}`
+        str += `.${bp}--oc-px-${spacing} {padding-left:${spacing}px;padding-right:${spacing}px;}`
         if (bpKeys.length - 1 == idx) {
-            ocstr += `.oc-px-${spacing} {padding:0 ${spacing}px;}`
+            ocstr += `.oc-px-${spacing} {padding-left:${spacing}px;padding-right:${spacing}px;}`
         }
-        str += `.${bp}--oc-py-${spacing} {padding:${spacing}px 0;}`
+        str += `.${bp}--oc-py-${spacing} {padding-bottom:${spacing}px;padding-top:${spacing}px;}`
         if (bpKeys.length - 1 == idx) {
-            ocstr += `.oc-py-${spacing} {padding:${spacing}px 0;}`
+            ocstr += `.oc-py-${spacing} {padding-bottom:${spacing}px;padding-top:${spacing}px;}`
         }
         str += `.${bp}--oc-pl-${spacing} {padding-left:${spacing}px;}`
         if (bpKeys.length - 1 == idx) {
@@ -326,7 +326,7 @@ function tplprocess(tplDoc, parentElement) {
         // add id
         dummy.children[0].setAttribute('id', tpl.id)
         // add style
-        tpl.style && dummy.children[0].setAttribute('style', tpl.style)
+        dummy.children[0].getAttribute('style') && dummy.children[0].setAttribute('style', tpl.style)
         // add class
         tpl.dataset.class && (dummy.children[0].className += ' ' + tpl.dataset.class)
         // add active
@@ -455,5 +455,5 @@ window.onclick = e => {
 export let rc = {
     updateUI,
     appendTpl,
-    html
+    html,
 }

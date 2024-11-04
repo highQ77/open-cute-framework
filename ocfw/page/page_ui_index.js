@@ -30,6 +30,11 @@ export let page_ui_index = `
         </div>
     </div>
 
+    <div class="oc-px-56 oc-py-8 oc-color-bg-black oc-color-txt-white">
+         <span>tool -></span>&nbsp;
+        <template class="button" onclick="showClassInPage()" data-class="oc-bd-1 oc-color-bg-primary4 oc-color-txt-white oc-w-160" data-hover="oc-color-bd-yellow">page classes</template>
+    </div>
+
     <div id="router"></div>
 
 </main>

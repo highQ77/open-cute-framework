@@ -74,5 +74,16 @@ export let func = {
         let codeResult = document.getElementById(codeResultID)
         codeResult.innerHTML = codeArea.value
         rc.updateUI()
+    },
+    showClassInPage(parent, ele, params) { // 顯示 page 裡面所有用到的 class
+        let all = '';
+        [...document.getElementsByTagName('*')].forEach(e => {
+            all += ' ' + e.className + ' '
+        })
+        all = all.split(' ').map(e => e.trim(e))
+            .filter(e => e != "")
+            .filter((value, index, array) => array.indexOf(value) === index)
+            .sort()
+        func.alertBox(parent, ele, [all.map(i => i + '<br>').join('')])
     }
 }
