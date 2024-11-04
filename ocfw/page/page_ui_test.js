@@ -1,9 +1,7 @@
 export let page_ui_test = `
-<div class="oc-px-24">
     <div class="oc-area-limit">
-        <div class="oc-area oc-py-24">
+        <div class="oc-color-bg-primary2 oc-center">
            test
         </div>
     </div>
-</div>
 `

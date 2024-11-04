@@ -1,8 +1,7 @@
 export let page_ui_intro = `
 <div>
-    <div id="responsive" class="oc-area-limit oc-mt-16">
 
-        <!-- playground -->
+    <div id="playground" class="oc-area-limit oc-mt-16">
         <div class="oc-color-bg-primary1 oc-p-16 oc-mt-56 oc-r-16 oc-box-shadow">
             <div class="oc-area oc-py-24">
                 <div class="oc-fs-24">Playground  <div class="oc-fs-10">press runcode button to show result</div></div>
@@ -28,8 +27,13 @@ export let page_ui_intro = `
                 </div>
             </div>
         </div>
+        <div class="oc-py-24"></div>
+    </div>
 
+    <template class="color_splitter"></template>
 
+    <div id="router" class="oc-area-limit oc-mt-16">
+        
         <!-- subject -->
         <div class="oc-pt-64 oc-fs-18 oc-middle">
             <span class="oc-fs-36 oc-mr-8">𖣐</span> Router (優化中)
@@ -41,24 +45,24 @@ export let page_ui_intro = `
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
             <div class="oc-fs-11"> routerView = 置換的頁面 </div>
         </div>
-        <div class="oc-py-8 oc-area">
+        <!--<div class="oc-py-8 oc-area oc-area-v">
             <template class="router" data-class="oc-left" data-active="activeStyle">
-                <template data-to="page_ui_test" class="button"
+                <template data-to="page_ui_intro/page_ui_test" class="button"
                     data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                     data-hover="oc-bd-4 oc-color-bd-orange">test1</template>
-                <template data-to="page_ui_test2" class="button"
+                <template data-to="page_ui_intro/page_ui_test2" class="button"
                     data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                     data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
             </template>
             [routerView]
-        </div>
+        </div>-->
         <textarea class="oc-wp-100 oc-p-8">
             <div class="oc-py-8 oc-area">
                 <template class="router" data-class="oc-left" data-active="activeStyle">
-                    <template data-to="page_ui_test" class="button"
+                     <template data-to="page_ui_intro/page_ui_test" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">test1</template>
-                    <template data-to="page_ui_test2" class="button"
+                    <template data-to="page_ui_intro/page_ui_test2" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
                 </template>
@@ -66,7 +70,12 @@ export let page_ui_intro = `
             </div>
         </textarea>
         <div class="oc-py-24"></div>
+    </div>
 
+    <template class="color_splitter"></template>
+
+
+    <div id="responsive" class="oc-area-limit oc-mt-16">
         
 
         <!-- subject -->
