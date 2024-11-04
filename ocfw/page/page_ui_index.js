@@ -12,17 +12,17 @@ export let page_ui_index = `
                         outline: 2px solid yellow;
                     }
                 </style>
-                <template class="router" data-class="oc-right oc-area" data-init="routerLink()" data-active="activeStyle">
-                    <template id="page_ui_demo" class="button"
+                <template class="router" data-class="oc-right oc-area" data-active="activeStyle">
+                    <template data-to="page_ui_features" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">features</template>
-                    <template id="page_ui_intro" class="button"
+                    <template data-to="page_ui_intro" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">intro</template>
-                    <!--<template id="page_ui_playground" class="button"
+                    <!--<template data-to="page_ui_playground" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">playground</template>-->
-                    <template id="https://github.com/highQ77/open-cute-framework" class="button"
+                    <template data-to="https://github.com/highQ77/open-cute-framework" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white"
                         data-hover="oc-bd-4 oc-color-bd-orange">github</template>
                 </template>

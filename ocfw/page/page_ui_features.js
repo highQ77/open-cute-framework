@@ -1,4 +1,4 @@
-export let page_ui_demo = `
+export let page_ui_features = `
 <div>
     
     <div class="oc-area oc-area-v">

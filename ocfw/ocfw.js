@@ -368,16 +368,23 @@ function tplprocess(tplDoc, parentElement) {
             }
         }
 
-        // init event
-        if (tpl.dataset.init) {
-            let attrname = tpl.dataset.init.split('(')[0]
-            let params = eval(tpl.dataset.init.split('(')[1].split(')')[0].split(',').filter(i => i != '')).map(i => {
-                if (eval(i) instanceof Object) return eval(i)
-                return isNaN(parseFloat(i)) ? i.replace(/\'/ig, '') : parseFloat(i)
-            })
-            let event = func[attrname].bind(resultElement, parentElement, resultElement, params)
-            requestAnimationFrame(event)
+        // add to (router)
+        if (tpl.dataset.to) {
+            resultElement.dataset.to = tpl.dataset.to
         }
+
+        // init event
+        // if (tpl.dataset.init) {
+        //     let attrname = tpl.dataset.init.split('(')[0]
+        //     let params = eval(tpl.dataset.init.split('(')[1].split(')')[0].split(',').filter(i => i != '')).map(i => {
+        //         if (eval(i) instanceof Object) return eval(i)
+        //         return isNaN(parseFloat(i)) ? i.replace(/\'/ig, '') : parseFloat(i)
+        //     })
+        //     if (func[attrname]) {
+        //         let event = func[attrname].bind(resultElement, parentElement, resultElement, params)
+        //         requestAnimationFrame(event)
+        //     }
+        // }
 
         // add event
         [...tpl.attributes].forEach(attr => {
