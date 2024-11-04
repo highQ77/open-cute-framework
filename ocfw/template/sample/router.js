@@ -24,6 +24,8 @@ export let router = {
             let pageId = location.href.split('/#/')[1]
             linkTo(pageId, true);
         };
+
+        let routerView = document.getElementById('router_' + ele.id)
         return
 
         // get element by location.href
@@ -42,8 +44,7 @@ export let router = {
             }
 
             // set router
-            let router = document.getElementById('router')
-            router.innerHTML = rc.html[pageId];
+            routerView.innerHTML = rc.html[pageId] + '';
             rc.updateUI();
 
             // active style

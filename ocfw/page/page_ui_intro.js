@@ -29,6 +29,46 @@ export let page_ui_intro = `
             </div>
         </div>
 
+
+        <!-- subject -->
+        <div class="oc-pt-64 oc-fs-18 oc-middle">
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Router (優化中)
+        </div>
+        <div class="oc-py-24"></div>
+
+        <!-- ex1 -->
+        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - router 用法</div>
+        <div class="oc-bdl-1 oc-pl-4 oc-p-8">
+            <div class="oc-fs-11"> routerView = 置換的頁面 </div>
+        </div>
+        <div class="oc-py-8 oc-area">
+            <template class="router" data-class="oc-left" data-active="activeStyle">
+                <template data-to="page_ui_test" class="button"
+                    data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
+                    data-hover="oc-bd-4 oc-color-bd-orange">test1</template>
+                <template data-to="page_ui_test2" class="button"
+                    data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
+                    data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
+            </template>
+            [routerView]
+        </div>
+        <textarea class="oc-wp-100 oc-p-8">
+            <div class="oc-py-8 oc-area">
+                <template class="router" data-class="oc-left" data-active="activeStyle">
+                    <template data-to="page_ui_test" class="button"
+                        data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
+                        data-hover="oc-bd-4 oc-color-bd-orange">test1</template>
+                    <template data-to="page_ui_test2" class="button"
+                        data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
+                        data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
+                </template>
+                [routerView]
+            </div>
+        </textarea>
+        <div class="oc-py-24"></div>
+
+        
+
         <!-- subject -->
         <div class="oc-pt-64 oc-fs-18 oc-middle">
             <span class="oc-fs-36 oc-mr-8">𖣐</span> Flex-Based Responsive Layout System

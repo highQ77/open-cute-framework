@@ -28,10 +28,10 @@ export let page_ui_features = `
             CSS RWD 設計除了 layout 以外，其他屬性如字級也可以配置 RWD 效果
         </template>
         <template class="album_card" data-params="'路由設計'">
-            有簡易的 Router 機制 (優化中)
+            簡易的 Router 配置，並可有多層結構 (url優化中)
         </template>
         <template class="album_card" data-params="'設計準則'">
-            (仍在設計中)
+            ocfw.config.js 關於間距、字級、顏色等規範設置
         </template>
         <template class="album_card" data-params="'原型設計'">
             (仍在設計中)

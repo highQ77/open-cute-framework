@@ -399,6 +399,7 @@ function tplprocess(tplDoc, parentElement) {
                 // resultElement.setAttribute(attr.name, attr.value)
             }
         })
+
         // nest child process
         tplprocess([...resultElement.getElementsByTagName('template')], resultElement)
 

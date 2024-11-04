@@ -1,5 +1,4 @@
 import { router } from './template/sample/router.js'
-import { color_splitter } from './template/sample/color_splitter.js'
 import { button } from './template/sample/button.js'
 import { radio_buttons } from './template/sample/radio_buttons.js'
 import { checkbox_buttons } from './template/sample/checkbox_buttons.js'
@@ -10,6 +9,7 @@ import { select } from './template/sample/select.js'
 import { carousel } from './template/sample/carousel.js'
 import { toggle } from './template/sample/toggle.js'
 import { album_card } from './template/others/album_card.js'
+import { color_splitter } from './template/others/color_splitter.js'
 
 export const template = {
     router,
