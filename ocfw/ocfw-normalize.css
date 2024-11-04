@@ -44,3 +44,9 @@ input {
         background-position: 0% 50%;
     }
 }
+
+textarea {
+    background-color: #222725;
+    color: #CCC;
+    border-radius: 8px;
+}

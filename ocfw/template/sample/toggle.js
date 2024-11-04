@@ -18,7 +18,7 @@ export let toggle = {
         let bg = ele.getElementsByClassName('toggleBG')[0]
         cb.onclick = () => {
             t.style.left = cb.checked ? "24px" : "0px";
-            bg.style.backgroundColor = cb.checked ? "orange" : "gray";
+            bg.style.backgroundColor = cb.checked ? "yellowgreen" : "gray";
         }
         cb.onclick()
     }

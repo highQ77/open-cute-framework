@@ -8,15 +8,15 @@ export let page_ui_intro = `
                 <div class="oc-fs-24">Playground  <div class="oc-fs-10">press runcode button to show result</div></div>
                 <div class="oc-right">
                     <template class="button" onclick="runCode('codearea','coderesult')"
-                        data-class="oc-color-bg-primary4 oc-color-txt-white" data-hover="oc-bd-4 oc-color-bd-orange">Run code</template>
+                        data-class="oc-color-bg-primary4 oc-color-txt-white" data-hover="oc-bd-4 oc-color-bd-yellowgreen">Run code</template>
                 </div>
             </div>
             <div class="oc-area oc-area-v">
                 <textarea id="codearea" class="oc-p-4 oc-color-bg-primary4 oc-color-txt-white oc-h-320 oc-min-h-320">
                     <div class="oc-py-8 oc-area">
-                        <div class="oc-bd-1 oc-color-bg-orange">1/3</div>
-                        <div class="oc-bd-1 oc-color-bg-orange">1/3</div>
-                        <div class="oc-bd-1 oc-color-bg-orange">1/3</div>
+                        <div class="oc-bd-1 oc-color-bg-yellowgreen">1/3</div>
+                        <div class="oc-bd-1 oc-color-bg-yellowgreen">1/3</div>
+                        <div class="oc-bd-1 oc-color-bg-yellowgreen">1/3</div>
                     </div>
                     <div class="oc-py-8">
                         <template class="button" onclick="alertBox('cool test 1')">alert-box-1</template>
@@ -306,22 +306,22 @@ export let page_ui_intro = `
             文字顏色,
             背景顏色, 框線顏色</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-color-txt-orange = text color is orange </div>
+            <div class="oc-fs-11"> oc-color-txt-yellowgreen = text color is yellowgreen </div>
             <div class="oc-fs-11"> oc-color-bg-black = background color is black </div>
             <div class="oc-fs-11"> oc-bd-1 = border width is 1px </div>
-            <div class="oc-fs-11"> oc-color-bd-orange = border color is orange </div>
+            <div class="oc-fs-11"> oc-color-bd-yellowgreen = border color is yellowgreen </div>
             <div class="oc-fs-11"> oc-ol-4 = outline width is 4px </div>
             <div class="oc-fs-11"> oc-color-ol-black = outline color is black </div>
         </div>
         <div class="oc-py-8 oc-area">
-            <div class="oc-color-txt-orange oc-color-bg-black oc-bd-1 oc-color-bd-orange oc-ol-4 oc-color-ol-black">
-                oc-color-txt-orange oc-color-bg-black oc-bd-1 oc-color-bd-orange oc-ol-4 oc-color-ol-black
+            <div class="oc-color-txt-yellowgreen oc-color-bg-black oc-bd-1 oc-color-bd-yellowgreen oc-ol-4 oc-color-ol-black">
+                oc-color-txt-yellowgreen oc-color-bg-black oc-bd-1 oc-color-bd-yellowgreen oc-ol-4 oc-color-ol-black
             </div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
                 <div class="oc-py-8 oc-area">
-                    <div class="oc-color-txt-orange oc-color-bg-black oc-bd-1 oc-color-bd-orange oc-ol-4 oc-color-ol-black">
-                        oc-color-txt-orange oc-color-bg-black oc-bd-1 oc-color-bd-orange oc-ol-4 oc-color-ol-black
+                    <div class="oc-color-txt-yellowgreen oc-color-bg-black oc-bd-1 oc-color-bd-yellowgreen oc-ol-4 oc-color-ol-black">
+                        oc-color-txt-yellowgreen oc-color-bg-black oc-bd-1 oc-color-bd-yellowgreen oc-ol-4 oc-color-ol-black
                     </div>
                 </div>
             </textarea>
@@ -344,25 +344,25 @@ export let page_ui_intro = `
             <div class="oc-fs-11"> oc-{p|px|py|pl|pt|pr|pb}-spacing. ex:oc-p-8. 8px paddings</div>
         </div>
         <div class="oc-py-8 oc-area">
-            <div class="oc-p-8 oc-bd-1 oc-color-bg-orange">
+            <div class="oc-p-8 oc-bd-1 oc-color-bg-yellowgreen">
                 <div class="oc-bd-1">oc-p-8</div>
             </div>
-            <div class="oc-p-16 oc-bd-1 oc-color-bg-orange">
+            <div class="oc-p-16 oc-bd-1 oc-color-bg-yellowgreen">
                 <div class="oc-bd-1">oc-p-16</div>
             </div>
-            <div class="oc-p-24 oc-bd-1 oc-color-bg-orange">
+            <div class="oc-p-24 oc-bd-1 oc-color-bg-yellowgreen">
                 <div class="oc-bd-1">oc-p-24</div>
             </div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
                 <div class="oc-py-8 oc-area">
-                    <div class="oc-p-8 oc-bd-1 oc-color-bg-orange">
+                    <div class="oc-p-8 oc-bd-1 oc-color-bg-yellowgreen">
                         <div class="oc-bd-1">oc-p-8</div>
                     </div>
-                    <div class="oc-p-16 oc-bd-1 oc-color-bg-orange">
+                    <div class="oc-p-16 oc-bd-1 oc-color-bg-yellowgreen">
                         <div class="oc-bd-1">oc-p-16</div>
                     </div>
-                    <div class="oc-p-24 oc-bd-1 oc-color-bg-orange">
+                    <div class="oc-p-24 oc-bd-1 oc-color-bg-yellowgreen">
                         <div class="oc-bd-1">oc-p-24</div>
                     </div>
                 </div>
@@ -376,25 +376,25 @@ export let page_ui_intro = `
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1 oc-py-8">
-                <div class="oc-ml-2 oc-bd-1 oc-color-bg-orange oc-w-64">oc-ml-2</div>
+                <div class="oc-ml-2 oc-bd-1 oc-color-bg-yellowgreen oc-w-64">oc-ml-2</div>
             </div>
             <div class="oc-bd-1 oc-py-8">
-                <div class="oc-ml-16 oc-bd-1 oc-color-bg-orange oc-w-64">oc-ml-16</div>
+                <div class="oc-ml-16 oc-bd-1 oc-color-bg-yellowgreen oc-w-64">oc-ml-16</div>
             </div>
             <div class="oc-bd-1 oc-py-8">
-                <div class="oc-ml-40 oc-bd-1 oc-color-bg-orange oc-w-64">oc-ml-40</div>
+                <div class="oc-ml-40 oc-bd-1 oc-color-bg-yellowgreen oc-w-64">oc-ml-40</div>
             </div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
                 <div class="oc-py-8 oc-area">
                     <div class="oc-bd-1 oc-py-8">
-                        <div class="oc-ml-2 oc-bd-1 oc-color-bg-orange oc-w-64">oc-ml-2</div>
+                        <div class="oc-ml-2 oc-bd-1 oc-color-bg-yellowgreen oc-w-64">oc-ml-2</div>
                     </div>
                     <div class="oc-bd-1 oc-py-8">
-                        <div class="oc-ml-16 oc-bd-1 oc-color-bg-orange oc-w-64">oc-ml-16</div>
+                        <div class="oc-ml-16 oc-bd-1 oc-color-bg-yellowgreen oc-w-64">oc-ml-16</div>
                     </div>
                     <div class="oc-bd-1 oc-py-8">
-                        <div class="oc-ml-40 oc-bd-1 oc-color-bg-orange oc-w-64">oc-ml-40</div>
+                        <div class="oc-ml-40 oc-bd-1 oc-color-bg-yellowgreen oc-w-64">oc-ml-40</div>
                     </div>
                 </div>
             </textarea>
@@ -407,15 +407,15 @@ export let page_ui_intro = `
             <div class="oc-fs-11"> oc-ol-spacing. ex: oc-ol-2. 2px solid black outline</div>
         </div>
         <div class="oc-py-16 oc-area">
-            <div class="oc-bd-1 oc-middle oc-p-4 oc-ol-8 oc-color-ol-orange">oc-bd-1 oc-ol-8</div>
-            <div class="oc-bd-4 oc-middle oc-p-4 oc-ol-4 oc-color-ol-orange">oc-bd-4 oc-ol-4</div>
-            <div class="oc-bd-8 oc-middle oc-p-4 oc-ol-1 oc-color-ol-orange">oc-bd-8 oc-ol-1</div>
+            <div class="oc-bd-1 oc-middle oc-p-4 oc-ol-8 oc-color-ol-yellowgreen">oc-bd-1 oc-ol-8</div>
+            <div class="oc-bd-4 oc-middle oc-p-4 oc-ol-4 oc-color-ol-yellowgreen">oc-bd-4 oc-ol-4</div>
+            <div class="oc-bd-8 oc-middle oc-p-4 oc-ol-1 oc-color-ol-yellowgreen">oc-bd-8 oc-ol-1</div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
                 <div class="oc-py-16 oc-area">
-                    <div class="oc-bd-1 oc-middle oc-p-4 oc-ol-8 oc-color-ol-orange">oc-bd-1 oc-ol-8</div>
-                    <div class="oc-bd-4 oc-middle oc-p-4 oc-ol-4 oc-color-ol-orange">oc-bd-4 oc-ol-4</div>
-                    <div class="oc-bd-8 oc-middle oc-p-4 oc-ol-1 oc-color-ol-orange">oc-bd-8 oc-ol-1</div>
+                    <div class="oc-bd-1 oc-middle oc-p-4 oc-ol-8 oc-color-ol-yellowgreen">oc-bd-1 oc-ol-8</div>
+                    <div class="oc-bd-4 oc-middle oc-p-4 oc-ol-4 oc-color-ol-yellowgreen">oc-bd-4 oc-ol-4</div>
+                    <div class="oc-bd-8 oc-middle oc-p-4 oc-ol-1 oc-color-ol-yellowgreen">oc-bd-8 oc-ol-1</div>
                 </div>
             </textarea>
         <div class="oc-py-24"></div>
@@ -428,25 +428,25 @@ export let page_ui_intro = `
         </div>
         <div class="oc-py-16 oc-area oc-h-160">
             <div class="oc-bd-1 oc-p-4">
-                <div class="oc-color-bg-orange oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
+                <div class="oc-color-bg-yellowgreen oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
             </div>
             <div class="oc-bd-1 oc-p-4 oc-center oc-middle">
-                <div class="oc-color-bg-orange oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
+                <div class="oc-color-bg-yellowgreen oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
             </div>
             <div class="oc-bd-1 oc-p-4 oc-bottom oc-right">
-                <div class="oc-color-bg-orange oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
+                <div class="oc-color-bg-yellowgreen oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
             </div>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
                 <div class="oc-pb-16 oc-area oc-h-160">
                     <div class="oc-bd-1 oc-p-4">
-                        <div class="oc-color-bg-orange oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
+                        <div class="oc-color-bg-yellowgreen oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
                     </div>
                     <div class="oc-bd-1 oc-p-4 oc-center oc-middle">
-                        <div class="oc-color-bg-orange oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
+                        <div class="oc-color-bg-yellowgreen oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
                     </div>
                     <div class="oc-bd-1 oc-p-4 oc-bottom oc-right">
-                        <div class="oc-color-bg-orange oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
+                        <div class="oc-color-bg-yellowgreen oc-box oc-w-64 oc-h-64">oc-w-64 oc-h-64</div>
                     </div>
                 </div>
             </textarea>
@@ -558,7 +558,7 @@ export let page_ui_intro = `
         </div>
         <div class="oc-py-8">
             <template class="button" onclick="simpleBtn(1,window,window.atob)"
-                data-hover="oc-bd-4 oc-color-bd-orange">primpary1</template>
+                data-hover="oc-bd-4 oc-color-bd-yellowgreen">primpary1</template>
             <template class="button" onclick="simpleBtn(2)" data-class="oc-color-bg-primary2">primpary2</template>
             <template class="button" data-class="oc-color-bg-primary3 oc-color-txt-white">primpary3</template>
             <template class="button" data-class="oc-color-bg-primary4 oc-color-txt-white">primpary4</template>
@@ -567,7 +567,7 @@ export let page_ui_intro = `
         <textarea class="oc-wp-100 oc-p-8">
                 <div class="oc-py-8">
                     <template class="button" onclick="simpleBtn(1,window,window.atob)"
-                data-hover="oc-bd-4 oc-color-bd-orange">primpary1</template>
+                data-hover="oc-bd-4 oc-color-bd-yellowgreen">primpary1</template>
                     <template class="button" onclick="simpleBtn(2)" data-class="oc-color-bg-primary2">primpary2</template>
                     <template class="button" data-class="oc-color-bg-primary3 oc-color-txt-white">primpary3</template>
                     <template class="button" data-class="oc-color-bg-primary4 oc-color-txt-white">primpary4</template>

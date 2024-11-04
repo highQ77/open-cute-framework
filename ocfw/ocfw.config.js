@@ -54,6 +54,7 @@ export let config = {
         green: 'green',
         blue: 'blue',
         purple: 'purple',
+        yellowgreen: 'yellowgreen',
         // custom primary, secondary, and other color
         primary1: '#F7F7F2',
         primary2: '#E4E6C3',

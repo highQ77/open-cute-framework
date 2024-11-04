@@ -9,11 +9,11 @@ export let page_ui_index = `
 
     <!-- title info -->
     <div class="oc-py-120 animate-bg">
-        <div class="oc-area oc-area-limit oc-middle">
-            <div>
-                <h1 class="oc-fs-30 oc-color-txt-white">Open Cute Framework <b class="oc-fs-13 oc-my-8">開源實驗框架</h1>
+        <div class="oc-area-limit">
+            <div class="oc-center">
+                <h1 class="oc-fs-48 oc-color-txt-white">Open Cute Framework <b class="oc-fs-13 oc-my-8">開源實驗框架</h1>
             </div>
-            <div>
+            <div class="oc-center oc-pt-56">
                 <style>
                     .activeStyle {
                         outline: 2px solid yellow;
