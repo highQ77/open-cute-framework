@@ -1,4 +1,32 @@
 import { rc } from "../../ocfw.js"
+import { features } from "../../page/feature.js";
+import { index } from "../../page/index.js"
+import { intro } from "../../page/intro.js";
+import { playground } from "../../page/playground.js";
+import { test } from "../../page/test.js";
+import { test2 } from "../../page/test2.js";
+import { testA } from "../../page/testA.js";
+import { testB } from "../../page/testB.js";
+
+function routerReplace(html, path) {
+    html = html
+        .replace('[routerView]', `<div id="rv_${path}"></div>`)
+        .replace('class="router"', ` id="${path}" class="router" `)
+    return html
+}
+
+const html = {
+    'index': routerReplace(index, 0),
+    'intro': routerReplace(intro, 1),
+    'features': routerReplace(features, 1),
+    'playground': routerReplace(playground, 1),
+    'intro/test': routerReplace(test, 2),
+    'intro/test2': routerReplace(test2, 2),
+    'intro/test2/testA': routerReplace(testA, 3),
+    'intro/test2/testB': routerReplace(testB, 3),
+}
+
+requestAnimationFrame(() => rc.initRouter(html.index))
 
 export let router = {
     html() {
@@ -10,7 +38,7 @@ export let router = {
     },
     js(ele) {
 
-        let routerView = document.getElementById('routerView_' + ele.id);
+        let routerView = document.getElementById('rv_' + ele.id);
 
         // all page id
         window.alllink = window.alllink || [];
@@ -49,21 +77,14 @@ export let router = {
             let rv = document.getElementById(routerView.id)
             if (rv) {
                 let segs = pageId.split('/')
-                let idx = segs[0]
-
-                // set default link 
-                let result = window.alllink.filter(v => v.indexOf(idx) > -1)[0]
-                if (result && result.indexOf(pageId) > -1) {
-                    segs = result.split('/')
+                let id = ''
+                for (let i = 0; i < segs.length; i++) {
+                    id += '/' + segs.shift()
+                    i--;
+                    updateView(id.slice(1))
                 }
-
-                // recursive rendering                
-                let allIds = []
-                let ids = [...segs];
-                for (let i = 1; i <= segs.length; i++) {
-                    allIds.push(ids.slice(0, i).join('/'))
-                }
-                allIds.forEach(id => updateView(id))
+                let idx = alllink.findIndex(i => i.indexOf(pageId + '/') > -1);
+                if (idx > -1) { updateView(alllink[idx]) }
             }
             else window.removeEventListener('popstate', popstate)
         }
@@ -82,7 +103,7 @@ export let router = {
                 link.classList.remove(ele.dataset.active)
                 if (link.dataset.to == pageId) {
                     // console.log('active', pageId)
-                    routerView.innerHTML = rc.html[pageId]
+                    routerView.innerHTML = html[pageId]
                     rc.updateUI()
                     requestAnimationFrame(() => link.classList.add(ele.dataset.active))
                 }

@@ -2,7 +2,6 @@
 import { config } from './ocfw.config.js'
 import { template } from './ocfw.templates.js'
 import { func } from './ocfw.func.js'
-import { html } from './ocfw.html.js'
 
 // css import
 let styleStr = `
@@ -408,6 +407,13 @@ function tplprocess(tplDoc, parentElement) {
     })
 }
 
+// all style
+styleStr += ocstr
+const style = document.createElement('style')
+style.textContent = styleStr
+
+
+
 function updateUI() {
     tplprocess([...document.getElementsByTagName('template')])
     winResize()
@@ -434,24 +440,6 @@ let winResize = () => {
 window.addEventListener('DOMContentLoaded', winResize)
 window.addEventListener('load', winResize)
 
-// all style
-styleStr += ocstr
-const style = document.createElement('style')
-style.textContent = styleStr
-// debug mode
-config.debug && document.body.classList.add('oc-debug')
-// apply index html
-document.body.innerHTML = html.index
-document.body.append(style)
-// show breakpoints info
-if (config.show_breakpoints_info) {
-    const ww = document.createElement('div')
-    ww.style = 'position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px;width:45px;}'
-    ww.innerHTML = window.innerWidth
-    window.addEventListener('resize', () => ww.innerHTML = window.innerWidth)
-    document.body.append(ww)
-}
-updateUI()
 
 // test
 window.onclick = e => {
@@ -463,5 +451,20 @@ window.onclick = e => {
 export let rc = {
     updateUI,
     appendTpl,
-    html,
+    initRouter(htmlIndex) {
+        // debug mode
+        config.debug && document.body.classList.add('oc-debug')
+        // apply index html
+        document.body.innerHTML = htmlIndex
+        document.body.append(style)
+        // show breakpoints info
+        if (config.show_breakpoints_info) {
+            const ww = document.createElement('div')
+            ww.style = 'position:fixed;bottom:0px;background:rgba(0,0,0,.5);color:white;padding:8px;width:45px;}'
+            ww.innerHTML = window.innerWidth
+            window.addEventListener('resize', () => ww.innerHTML = window.innerWidth)
+            document.body.append(ww)
+        }
+        updateUI()
+    },
 }
