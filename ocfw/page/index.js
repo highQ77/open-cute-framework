@@ -2,7 +2,7 @@ export let index = `
 <main style="min-height: calc(100vh - 48px);">
     
     <!-- tools -->
-    <div class="oc-px-56 oc-py-8 oc-color-bg-black oc-color-txt-white">
+    <div class="oc-sticky oc-pos-t-0 oc-px-56 oc-py-8 oc-color-bg-black oc-color-txt-white">
          <span>tools -></span>&nbsp;
         <template class="button" onclick="showClassInPage()" data-class="oc-bd-1 oc-color-bg-primary4 oc-color-txt-white oc-w-160" data-hover="oc-color-bd-yellow">page checker</template>
     </div>

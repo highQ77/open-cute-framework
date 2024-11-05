@@ -6,7 +6,7 @@ export let features = `
         <div class="oc-center oc-fs-18 oc-px-24">
             <div class="oc-w-640 oc-area oc-area-v">
                 <div class="oc-txt-center">React / Vue / Angular 以外簡單易用的新選擇</div>
-                <div class="oc-txt-center">適合開發開源的專案、Git Page、設計準則 Design Guideline、原型 Prototype</div>
+                <div class="oc-txt-center">適合開發開源的專案、Git Page、程式生成設計準則 Design Guideline</div>
             </div>
         </div>
     </div>
