@@ -10,7 +10,7 @@ export let router = {
     },
     js(ele) {
 
-        let routerView = document.getElementById('router_' + ele.id);
+        let routerView = document.getElementById('routerView_' + ele.id);
 
         // all page id
         window.alllink = window.alllink || [];

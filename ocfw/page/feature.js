@@ -1,4 +1,4 @@
-export let page_ui_features = `
+export let features = `
 <div>
     
     <div class="oc-area oc-area-v">
@@ -6,7 +6,7 @@ export let page_ui_features = `
         <div class="oc-center oc-fs-18 oc-px-24">
             <div class="oc-w-640 oc-area oc-area-v">
                 <div class="oc-txt-center">React / Vue / Angular 以外簡單易用的新選擇</div>
-                <div class="oc-txt-center">適合開發開源的專案、設計準則 Design Guideline、原型 Prototype</div>
+                <div class="oc-txt-center">適合開發開源的專案、Git Page、設計準則 Design Guideline、原型 Prototype</div>
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@ export let page_ui_features = `
             ocfw.config.js 關於間距、字級、顏色等規範設置
         </template>
         <template class="album_card" data-params="'原型設計'">
-            (仍在設計中)
+            以本站設計為例
         </template>
     </div>
 

@@ -441,7 +441,7 @@ style.textContent = styleStr
 // debug mode
 config.debug && document.body.classList.add('oc-debug')
 // apply index html
-document.body.innerHTML = html.page_ui_index
+document.body.innerHTML = html.index
 document.body.append(style)
 // show breakpoints info
 if (config.show_breakpoints_info) {

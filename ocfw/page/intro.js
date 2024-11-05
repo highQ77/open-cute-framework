@@ -1,4 +1,4 @@
-export let page_ui_intro = `
+export let intro = `
 <div>
 
     <div id="playground" class="oc-area-limit oc-mt-16">
@@ -47,10 +47,10 @@ export let page_ui_intro = `
         </div>
         <div class="oc-py-8 oc-area oc-area-v">
             <template class="router" data-class="oc-left" data-active="activeStyle">
-                <template data-to="page_ui_intro/page_ui_test" class="button"
+                <template data-to="intro/test" class="button"
                     data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                     data-hover="oc-bd-4 oc-color-bd-orange">test1</template>
-                <template data-to="page_ui_intro/page_ui_test2" class="button"
+                <template data-to="intro/test2" class="button"
                     data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                     data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
             </template>
@@ -59,10 +59,10 @@ export let page_ui_intro = `
         <textarea class="oc-wp-100 oc-p-8">
             <div class="oc-py-8 oc-area">
                 <template class="router" data-class="oc-left" data-active="activeStyle">
-                     <template data-to="page_ui_intro/page_ui_test" class="button"
+                     <template data-to="intro/test" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">test1</template>
-                    <template data-to="page_ui_intro/page_ui_test2" class="button"
+                    <template data-to="intro/test2" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
                 </template>

@@ -1,4 +1,4 @@
-export let page_ui_index = `
+export let index = `
 <main style="min-height: calc(100vh - 48px);">
     
     <!-- tools -->
@@ -23,13 +23,13 @@ export let page_ui_index = `
                     }
                 </style>
                 <template class="router" data-class="oc-right" data-active="activeStyle">
-                    <template data-to="page_ui_features" class="button"
+                    <template data-to="features" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">features</template>
-                    <template data-to="page_ui_intro" class="button"
+                    <template data-to="intro" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">intro</template>
-                    <!--<template data-to="page_ui_playground" class="button"
+                    <!--<template data-to="playground" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">playground</template>-->
                     <template data-to="https://github.com/highQ77/open-cute-framework" class="button"
