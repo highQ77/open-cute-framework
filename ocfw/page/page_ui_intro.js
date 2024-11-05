@@ -36,7 +36,7 @@ export let page_ui_intro = `
         
         <!-- subject -->
         <div class="oc-pt-64 oc-fs-18 oc-middle">
-            <span class="oc-fs-36 oc-mr-8">𖣐</span> Router (優化中)
+            <span class="oc-fs-36 oc-mr-8">𖣐</span> Router
         </div>
         <div class="oc-py-24"></div>
 
@@ -45,7 +45,7 @@ export let page_ui_intro = `
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
             <div class="oc-fs-11"> routerView = 置換的頁面 </div>
         </div>
-        <!--<div class="oc-py-8 oc-area oc-area-v">
+        <div class="oc-py-8 oc-area oc-area-v">
             <template class="router" data-class="oc-left" data-active="activeStyle">
                 <template data-to="page_ui_intro/page_ui_test" class="button"
                     data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
@@ -55,7 +55,7 @@ export let page_ui_intro = `
                     data-hover="oc-bd-4 oc-color-bd-orange">test2</template>
             </template>
             [routerView]
-        </div>-->
+        </div>
         <textarea class="oc-wp-100 oc-p-8">
             <div class="oc-py-8 oc-area">
                 <template class="router" data-class="oc-left" data-active="activeStyle">

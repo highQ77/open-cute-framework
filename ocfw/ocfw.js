@@ -456,7 +456,7 @@ updateUI()
 // test
 window.onclick = e => {
     window.onclick = null
-    console.log(e.pageY)
+    // console.log(e.pageY)
     //window.scrollTo(0, 7700)
 }
 
