@@ -1,6 +1,6 @@
 export let test2 = `
     <div class="oc-area-limit">
-        <div class="oc-color-bg-primary2 oc-center oc-fs-36 oc-color-txt-orange">
+        <div class="oc-area oc-area-v oc-color-bg-primary2 oc-center oc-fs-36 oc-color-txt-orange">
            test2
            <template class="router" data-class="oc-left oc-fs-18" data-active="activeStyle">
                 <template data-to="intro/test2/testA" class="button"

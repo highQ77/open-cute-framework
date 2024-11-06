@@ -2,7 +2,7 @@ todolist:
 > input text
 > input file
 > form
-> level-2 router
 
+> router子級閃現問題 ok
 > hover機制
-> router子級閃現
+> 雙向變數

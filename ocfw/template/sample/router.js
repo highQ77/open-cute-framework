@@ -54,7 +54,7 @@ export let router = {
         [...ele.children].forEach(ch => ch.onclick = () => go(ch.dataset.to))
 
         // first call
-        requestAnimationFrame(popstate)
+        popstate()
 
         // popstate
         window.addEventListener('popstate', popstate)
@@ -113,10 +113,9 @@ export let router = {
             [...ele.children].forEach(link => {
                 link.classList.remove(ele.dataset.active)
                 if (link.dataset.to == pageId) {
-                    // console.log('active', pageId)
-                    console.log(routerView.id, pageId)
                     routerView.innerHTML = html[pageId]
                     rc.updateUI()
+                    link.classList.add(ele.dataset.active)
                     requestAnimationFrame(() => link.classList.add(ele.dataset.active))
                 }
             })
