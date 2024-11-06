@@ -414,8 +414,8 @@ style.textContent = styleStr
 
 
 
-function updateUI() {
-    tplprocess([...document.getElementsByTagName('template')])
+function updateUI(ele) {
+    tplprocess([...(ele || document).getElementsByTagName('template')])
     winResize()
 }
 

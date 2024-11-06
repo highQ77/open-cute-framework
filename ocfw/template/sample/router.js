@@ -8,6 +8,8 @@ import { test2 } from "../../page/test2.js";
 import { testA } from "../../page/testA.js";
 import { testB } from "../../page/testB.js";
 
+requestAnimationFrame(() => rc.initRouter(html.index))
+
 function routerReplace(html, path) {
     html = html
         .replace('[routerView]', `<div id="rv_${path}"></div>`)
@@ -25,8 +27,6 @@ const html = {
     'intro/test2/testA': routerReplace(testA, 3),
     'intro/test2/testB': routerReplace(testB, 3),
 }
-
-requestAnimationFrame(() => rc.initRouter(html.index))
 
 export let router = {
     html() {
@@ -110,12 +110,11 @@ export let router = {
 
         function updateView(pageId) {
             // active style
-            [...ele.children].forEach(link => {
+            [...ele.children].forEach((link, i, arr) => {
                 link.classList.remove(ele.dataset.active)
                 if (link.dataset.to == pageId) {
                     routerView.innerHTML = html[pageId]
-                    rc.updateUI()
-                    link.classList.add(ele.dataset.active)
+                    rc.updateUI(routerView)
                     requestAnimationFrame(() => link.classList.add(ele.dataset.active))
                 }
             })
