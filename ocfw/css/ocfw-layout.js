@@ -1,3 +1,5 @@
+export let ocfw_layout = `
+
 /* design by william77 */
 
 /* ********************************** variable settings - start ************************************** */
@@ -265,3 +267,4 @@ body.oc-debug .oc-area>* {
 }
 
 /* ********************************** manual columns distribution - end ************************************** */
+`

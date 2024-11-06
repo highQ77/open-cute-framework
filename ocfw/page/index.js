@@ -29,9 +29,6 @@ export let index = `
                     <template data-to="intro" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">intro</template>
-                    <!--<template data-to="playground" class="button"
-                        data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
-                        data-hover="oc-bd-4 oc-color-bd-orange">playground</template>-->
                     <template data-to="https://github.com/highQ77/open-cute-framework" class="button"
                         data-class="oc-color-bg-primary4 oc-color-txt-white oc-mx-4"
                         data-hover="oc-bd-4 oc-color-bd-orange">github</template>

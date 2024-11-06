@@ -1,31 +1,42 @@
 import { rc } from "../../ocfw.js"
+
+// [step1] ipmort htmls
 import { features } from "../../page/feature.js";
 import { index } from "../../page/index.js"
 import { intro } from "../../page/intro.js";
-import { playground } from "../../page/playground.js";
 import { test } from "../../page/test.js";
 import { test2 } from "../../page/test2.js";
 import { testA } from "../../page/testA.js";
 import { testB } from "../../page/testB.js";
+// .... add import here
 
+// [step2] register router page 
+// 'index': routerReplace(index, 0),
+// 1.'index' -> router path
+// 2. routerReplace -> replace content
+// 3. (index, 0) -> html page instance, 0 is level
+const html = {
+    'index': routerReplace(index, 0),
+    'intro': routerReplace(intro, 1),
+    'features': routerReplace(features, 1),
+    'intro/test': routerReplace(test, 2),
+    'intro/test2': routerReplace(test2, 2),
+    'intro/test2/testA': routerReplace(testA, 3),
+    'intro/test2/testB': routerReplace(testB, 3),
+    // .... register router here
+}
+
+// ---------- do not change code bellow
+
+// initialize router
 requestAnimationFrame(() => rc.initRouter(html.index))
 
+// replace router content
 function routerReplace(html, path) {
     html = html
         .replace('[routerView]', `<div id="rv_${path}"></div>`)
         .replace('class="router"', ` id="${path}" class="router" `)
     return html
-}
-
-const html = {
-    'index': routerReplace(index, 0),
-    'intro': routerReplace(intro, 1),
-    'features': routerReplace(features, 1),
-    'playground': routerReplace(playground, 1),
-    'intro/test': routerReplace(test, 2),
-    'intro/test2': routerReplace(test2, 2),
-    'intro/test2/testA': routerReplace(testA, 3),
-    'intro/test2/testB': routerReplace(testB, 3),
 }
 
 export let router = {

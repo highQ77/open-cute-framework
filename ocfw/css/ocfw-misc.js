@@ -1,3 +1,4 @@
+export let ocfw_misc = `
 /* design by william77 */
 
 .oc-cursor {
@@ -54,3 +55,5 @@
 .oc-z-index-dialog {
     z-index: 100;
 }
+
+`

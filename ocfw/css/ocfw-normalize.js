@@ -1,3 +1,5 @@
+export let ocfw_normalize = `
+
 /* design by william77 */
 html,
 body {
@@ -51,3 +53,5 @@ textarea {
     color: #CCC;
     border-radius: 8px;
 }
+
+`

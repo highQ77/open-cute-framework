@@ -2,10 +2,15 @@
 import { config } from './ocfw.config.js'
 import { template } from './ocfw.templates.js'
 import { func } from './ocfw.func.js'
+import { ocfw_normalize } from './css/ocfw-normalize.js'
+import { ocfw_layout } from './css/ocfw-layout.js'
+import { ocfw_misc } from './css/ocfw-misc.js'
 
 // css import
 let styleStr = `
-    ${config.css_import.map(css => `@import url(${css});`).join('')}
+    ${ocfw_normalize}
+    ${ocfw_layout}
+    ${ocfw_misc}
     :root {
         /* the gutter of rows and columns */
         --oc-layout-gutter: ${config.layout_gutter}px;
