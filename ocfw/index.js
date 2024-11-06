@@ -418,7 +418,6 @@ const style = document.createElement('style')
 style.textContent = styleStr
 
 
-
 function updateUI(ele) {
     tplprocess([...(ele || document).getElementsByTagName('template')])
     winResize()
