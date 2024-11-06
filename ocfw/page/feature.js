@@ -2,7 +2,7 @@ export let features = `
 <div>
     
     <div class="oc-area oc-area-v">
-        <div class="oc-center oc-fs-30 oc-py-48 oc-mt-40">Open Cute Framework</div>
+        <div class="oc-center oc-fs-30 oc-py-48 oc-mt-40">Features</div>
         <div class="oc-center oc-fs-18 oc-px-24">
             <div class="oc-w-640 oc-area oc-area-v">
                 <div class="oc-txt-center">React / Vue / Angular 以外簡單易用的新選擇</div>
