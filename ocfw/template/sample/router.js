@@ -39,6 +39,7 @@ export let router = {
     js(ele) {
 
         let routerView = document.getElementById('rv_' + ele.id);
+        routerView.popstate = popstate
 
         // all page id
         window.alllink = window.alllink || [];
@@ -58,6 +59,9 @@ export let router = {
         // popstate
         window.addEventListener('popstate', popstate)
 
+        // repeat
+        let repeat = '_'
+
         // onpopstate event
         function popstate() {
             let pageId = location.href.split('/#/')[1]
@@ -75,18 +79,25 @@ export let router = {
 
             // render page
             let rv = document.getElementById(routerView.id)
+
             if (rv) {
                 let segs = pageId.split('/')
                 let id = ''
                 for (let i = 0; i < segs.length; i++) {
                     id += '/' + segs.shift()
-                    i--;
                     updateView(id.slice(1))
+                    i--;
                 }
                 let idx = alllink.findIndex(i => i.indexOf(pageId + '/') > -1);
                 if (idx > -1) { updateView(alllink[idx]) }
             }
-            else window.removeEventListener('popstate', popstate)
+
+            // 父 router 切換時子 router 需要刪除 popstate
+            let subRouter = document.getElementById('rv_' + (parseInt(routerView.id.split('_')[1]) + 1))
+            if (subRouter) {
+                window.removeEventListener('popstate', subRouter.popstate)
+                subRouter.popstate = null
+            }
         }
 
         // go to page
@@ -103,6 +114,7 @@ export let router = {
                 link.classList.remove(ele.dataset.active)
                 if (link.dataset.to == pageId) {
                     // console.log('active', pageId)
+                    console.log(routerView.id, pageId)
                     routerView.innerHTML = html[pageId]
                     rc.updateUI()
                     requestAnimationFrame(() => link.classList.add(ele.dataset.active))
