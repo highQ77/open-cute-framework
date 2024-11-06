@@ -1,4 +1,4 @@
-import { rc } from './ocfw.js'
+import { rc } from './index.js'
 
 export let func = {
     simpleBtn(parent, ele, params) {

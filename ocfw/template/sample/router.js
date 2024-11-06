@@ -1,4 +1,4 @@
-import { rc } from "../../ocfw.js"
+import { rc } from "../../index.js"
 
 // [step1] ipmort htmls
 import { features } from "../../page/feature.js";

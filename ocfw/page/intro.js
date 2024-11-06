@@ -734,31 +734,31 @@ export let intro = `
             <div class="oc-fs-11">data-size = image bakcground-size style </div>
         </div>
         <div class="oc-area oc-py-8">
-            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="auto">
+            <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="auto">
                 <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Auto</div>
             </template>
-            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="cover">
+            <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="cover">
                 <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Cover</div>
             </template>
-            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="contain">
+            <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="contain">
                 <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Contain</div>
             </template>
-            <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="full">
+            <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="full">
                 <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Full</div>
             </template>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
             <div class="oc-area oc-py-8">
-                <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="auto">
+                <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="auto">
                     <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Auto</div>
                 </template>
-                <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="cover">
                     <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Cover</div>
                 </template>
-                <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="contain">
+                <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="contain">
                     <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Contain</div>
                 </template>
-                <template class="image" data-src="./img/test.png" data-class="oc-h-160" data-size="full">
+                <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="full">
                     <div class="oc-p-8 oc-color-bg-black oc-color-txt-white oc-op-50">Full</div>
                 </template>
             </div>
@@ -783,26 +783,26 @@ export let intro = `
         </div>
         <div class="oc-py-8">
             <template class="carousel" data-params="320" data-class="oc-r-32 oc-hidden">
-                <template class="image" data-src="./img/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">slide01</div>
                 </template>
-                <template class="image" data-src="./img/test2.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-left oc-top" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test2.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-left oc-top" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">sayhi02</div>
                 </template>
-                <template class="image" data-src="./img/test3.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-right oc-bottom" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test3.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-right oc-bottom" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">run03</div>
                 </template>
             </template>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
             <template class="carousel" data-params="320" data-class="oc-r-32 oc-hidden">
-                <template class="image" data-src="./img/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">slide01</div>
                 </template>
-                <template class="image" data-src="./img/test2.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-left oc-top" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test2.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-left oc-top" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">sayhi02</div>
                 </template>
-                <template class="image" data-src="./img/test3.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-right oc-bottom" data-size="cover">
+                <template class="image" data-src="./assets/imgs/test3.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-right oc-bottom" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">run03</div>
                 </template>
             </template>
