@@ -36,6 +36,9 @@ export let features = `
         <template class="album_card" data-params="'打包與保護程式'">
             透過 webpack 打包網站成單一 bundle.js 在 dist 資料夾內，且 js 難以逆向還原
         </template>
+        <template class="album_card" data-params="'解決桌面應用整合問題'">
+            同前述非編譯即可預覽，可快速整合 Electron、NW.js、neutralinojs 進行跨平台應用開發
+        </template>
     </div>
 
 </div>
