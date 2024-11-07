@@ -314,6 +314,7 @@ bpKeys.forEach((bp, idx) => {
 // ================================================================================================================================== //
 
 /* ************************************** template engine ************************************** */
+let prefix = '___' // template data-params attribute (object)
 
 function tplprocess(tplDoc, parentElement) {
     tplDoc.forEach((tpl, idx) => {
@@ -321,7 +322,12 @@ function tplprocess(tplDoc, parentElement) {
         // slot
         let slot = tpl.innerHTML
         // pass params
-        let params = tpl.dataset.params ? eval(tpl.dataset.params) : null
+        let pre = ''
+        if (tpl.dataset.params && tpl.dataset.params.slice(0, prefix.length) == prefix) {
+            tpl.dataset.params = atob(tpl.dataset.params.slice(prefix.length))
+        }
+        let params = (new Function(`return ${tpl.dataset.params};`))()
+
         // dummy for content, and slot
         let dummy = document.createElement('div')
         tpl.id = tpl.id || `${Date.now()}_tpl_id_${idx}_${Math.random()}`
@@ -430,20 +436,24 @@ function appendTpl(html) {
     updateUI()
 }
 
-
 // fix textarea height
 let winResize = () => {
-    ;[...document.getElementsByTagName('textarea')].forEach(tt => {
+    [...document.getElementsByTagName('textarea')].forEach(tt => {
         let s = tt.value.trimEnd().indexOf('<')
         let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
         tt.style.overflow = 'hidden'
         tt.value = t.join('\n')
-        tt.style.minHeight = tt.scrollHeight + 'px'
+        tt.style.minHeight = tt.scrollHeight + 'px';
+
+        [...tt.value.matchAll(/data\-params+=".+?"/ig)].forEach(([ta]) => {
+            let v = ta.replace('data-params=\"', '').replace('\"', '')
+            let og = v
+            if (v.slice(0, prefix.length) == prefix)
+                v = atob(v.slice(prefix.length))
+            tt.value = tt.value.replace(new RegExp(og, 'ig'), v)
+        })
     })
 }
-window.addEventListener('DOMContentLoaded', winResize)
-window.addEventListener('load', winResize)
-
 
 // test
 window.onclick = e => {

@@ -23,7 +23,7 @@ export let carousel = {
         `
     },
     js(ele, params) {
-        let height = params
+        let { height } = params
         ele.innerHTML = ele.innerHTML.replace(/oc\-h\-640/ig, 'oc-h-' + height)
 
         let carouselContent = ele.getElementsByClassName('carouselContent')[0]

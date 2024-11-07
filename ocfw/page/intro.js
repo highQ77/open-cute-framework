@@ -782,7 +782,7 @@ export let intro = `
             advanced component
         </div>
         <div class="oc-py-8">
-            <template class="carousel" data-params="320" data-class="oc-r-32 oc-hidden">
+            <template class="carousel" data-params="{height:320,width:240}" data-class="oc-r-32 oc-hidden">
                 <template class="image" data-src="./assets/imgs/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">slide01</div>
                 </template>
@@ -795,7 +795,7 @@ export let intro = `
             </template>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-            <template class="carousel" data-params="320" data-class="oc-r-32 oc-hidden">
+            <template class="carousel" data-params="{height:320,width:240}" data-class="oc-r-32 oc-hidden">
                 <template class="image" data-src="./assets/imgs/test.png" data-class="oc-pos-abs oc-wp-100 oc-p-56 oc-center oc-middle" data-size="cover">
                     <div class="oc-color-txt-white oc-fs-72">slide01</div>
                 </template>

@@ -33,9 +33,16 @@ requestAnimationFrame(() => rc.initRouter(html.index))
 
 // replace router content
 function routerReplace(html, path) {
+
+    // replace
     html = html
         .replace('[routerView]', `<div id="rv_${path}"></div>`)
         .replace('class="router"', ` id="${path}" class="router" `)
+
+    // let data-params value support object type
+    let objs = [...html.matchAll(/data\-params+=".+?"/ig)].map(([i]) => i.replace('data-params=\"', '').replace('\"', '')).filter(i => i[0] == '{')
+    objs.forEach(i => html = html.replace(new RegExp(i, 'ig'), '___' + btoa(i)))
+
     return html
 }
 
