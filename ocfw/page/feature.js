@@ -33,7 +33,7 @@ export let features = `
         <template class="album_card" data-params="'設計準則'">
             ocfw.config.js 關於間距、字級、顏色等規範設置
         </template>
-        <template class="album_card" data-params="'打包成品'">
+        <template class="album_card" data-params="'打包成品與保護程式'">
             透過 webpack 打包網站成單一 bundle.js 在 dist 資料夾內，且 js 難以逆向還原
         </template>
     </div>

@@ -439,12 +439,14 @@ function appendTpl(html) {
 // fix textarea height
 let winResize = () => {
     [...document.getElementsByTagName('textarea')].forEach(tt => {
+        // style the textarea
         let s = tt.value.trimEnd().indexOf('<')
         let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
         tt.style.overflow = 'hidden'
         tt.value = t.join('\n')
         tt.style.minHeight = tt.scrollHeight + 'px';
 
+        // data params object type decode
         [...tt.value.matchAll(/data\-params+=".+?"/ig)].forEach(([ta]) => {
             let v = ta.replace('data-params=\"', '').replace('\"', '')
             let og = v
