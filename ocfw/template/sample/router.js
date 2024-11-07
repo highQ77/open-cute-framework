@@ -8,6 +8,7 @@ import { test } from "../../page/test.js";
 import { test2 } from "../../page/test2.js";
 import { testA } from "../../page/testA.js";
 import { testB } from "../../page/testB.js";
+import { tutorial } from "../../page/tutorial.js";
 // .... add import here
 
 // [step2] register router page 
@@ -18,6 +19,7 @@ import { testB } from "../../page/testB.js";
 const html = {
     'index': routerReplace(index, 0),
     'intro': routerReplace(intro, 1),
+    'tutorial': routerReplace(tutorial, 1),
     'features': routerReplace(features, 1),
     'intro/test': routerReplace(test, 2),
     'intro/test2': routerReplace(test2, 2),
@@ -32,12 +34,12 @@ const html = {
 requestAnimationFrame(() => rc.initRouter(html.index))
 
 // replace router content
-function routerReplace(html, path) {
+function routerReplace(html, level) {
 
     // replace
     html = html
-        .replace('[routerView]', `<div id="rv_${path}"></div>`)
-        .replace('class="router"', ` id="${path}" class="router" `)
+        .replace('[routerView]', `<div id="rv_${level}"></div>`)
+        .replace('class="router"', ` id="${level}" class="router" `)
 
     // let data-params value support object type
     let objs = [...html.matchAll(/data\-params+=".+?"/ig)].map(([i]) => i.replace('data-params=\"', '').replace('\"', '')).filter(i => i[0] == '{')

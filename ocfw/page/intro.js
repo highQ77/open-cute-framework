@@ -691,10 +691,10 @@ export let intro = `
             <template class="button" onclick="confirmBox('cool test A - comfirm box')">comfirm-box-1</template>
         </div>
         <textarea class="oc-wp-100 oc-p-8">
-                <div class="oc-py-8">
-                    <template class="button" onclick="confirmBox('cool test A - comfirm box')">comfirm-box-1</template>
-                </div>
-            </textarea>
+            <div class="oc-py-8">
+                <template class="button" onclick="confirmBox('cool test A - comfirm box')">comfirm-box-1</template>
+            </div>
+        </textarea>
         <div class="oc-py-24"></div>
 
         <!-- ex6 -->

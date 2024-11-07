@@ -446,7 +446,6 @@ function appendTpl(html) {
 
 // fix textarea height
 let textAreaFix = () => {
-    console.log('textAreaFix');
     [...document.getElementsByTagName('textarea')].forEach(tt => {
         // data params object type decode
         let objParam = [...tt.value.matchAll(/data\-params+=".+?"/ig)]
