@@ -322,7 +322,6 @@ function tplprocess(tplDoc, parentElement) {
         // slot
         let slot = tpl.innerHTML
         // pass params
-        let pre = ''
         if (tpl.dataset.params && tpl.dataset.params.slice(0, prefix.length) == prefix) {
             tpl.dataset.params = atob(tpl.dataset.params.slice(prefix.length))
         }
@@ -423,10 +422,19 @@ styleStr += ocstr
 const style = document.createElement('style')
 style.textContent = styleStr
 
-
+let tid = -1
+let preId = -2
 function updateUI(ele) {
+    clearTimeout(tid)
     tplprocess([...(ele || document).getElementsByTagName('template')])
-    winResize()
+    if (tid != preId) {
+        tid = setTimeout(() => {
+            tid = -1
+            preId = -2
+            textAreaFix()
+        })
+        preId = tid
+    }
 }
 
 function appendTpl(html) {
@@ -437,23 +445,26 @@ function appendTpl(html) {
 }
 
 // fix textarea height
-let winResize = () => {
+let textAreaFix = () => {
+    console.log('textAreaFix');
     [...document.getElementsByTagName('textarea')].forEach(tt => {
+        // data params object type decode
+        let objParam = [...tt.value.matchAll(/data\-params+=".+?"/ig)]
+        if (objParam[0]) {
+            let v = objParam[0][0].replace('data-params=\"', '').replace('\"', '')
+            let og = v
+            if (v.slice(0, prefix.length) == prefix) {
+                v = atob(v.slice(prefix.length))
+                tt.value = tt.value.replace(new RegExp(og, 'ig'), v)
+            }
+        }
+
         // style the textarea
         let s = tt.value.trimEnd().indexOf('<')
         let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
         tt.style.overflow = 'hidden'
         tt.value = t.join('\n')
         tt.style.minHeight = tt.scrollHeight + 'px';
-
-        // data params object type decode
-        [...tt.value.matchAll(/data\-params+=".+?"/ig)].forEach(([ta]) => {
-            let v = ta.replace('data-params=\"', '').replace('\"', '')
-            let og = v
-            if (v.slice(0, prefix.length) == prefix)
-                v = atob(v.slice(prefix.length))
-            tt.value = tt.value.replace(new RegExp(og, 'ig'), v)
-        })
     })
 }
 
