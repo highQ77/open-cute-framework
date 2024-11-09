@@ -16,7 +16,7 @@ html *:after {
 
 body {
     font-family: system-ui;
-    font-size: 12px;
+    font-size: 14px;
     color: #646258 !important;
     background: #e8e8e8;
 }
@@ -51,6 +51,7 @@ input {
 textarea {
     background-color: #222725;
     color: #CCC;
+    font-size: 14px;
     border-radius: 8px;
 }
 

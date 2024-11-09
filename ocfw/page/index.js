@@ -14,7 +14,7 @@ export let index = `
                 <h1 class="oc-fs-48">Open Cute Framework</h1>
             </div>
             <div class="oc-center">
-                <b class="oc-fs-13 oc-my-8">開源實驗框架</b>
+                <b class="oc-my-8">開源實驗框架</b>
             </div>
             <div class="oc-center oc-pt-56">
                 <style>

@@ -4,7 +4,7 @@ export let intro = `
     <div id="playground" class="oc-area-limit oc-mt-16">
         <div class="oc-color-bg-primary1 oc-p-16 oc-mt-56 oc-r-16 oc-box-shadow">
             <div class="oc-area oc-py-24">
-                <div class="oc-fs-24">Playground  <div class="oc-fs-10">press runcode button to show result</div></div>
+                <div class="oc-fs-24">Playground</div>
                 <div class="oc-right">
                     <template class="button" onclick="runCode('codearea','coderesult')"
                         data-class="oc-color-bg-primary4 oc-color-txt-white" data-hover="oc-bd-4 oc-color-bd-yellowgreen">Run code</template>
@@ -41,9 +41,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - router 用法</div>
+        <div class="oc-bdl-4 oc-pl-4"> example1 - router 用法</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> routerView = 置換的頁面 </div>
+            <div> routerView = 置換的頁面 </div>
         </div>
         <div class="oc-py-8 oc-area oc-area-v">
             <template class="router" data-class="oc-left" data-active="activeStyle">
@@ -85,11 +85,11 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - auto distribution / 自動分配</div>
+        <div class="oc-bdl-4 oc-pl-4"> example1 - auto distribution / 自動分配</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-py-8 = padding-top 8px + padding-bottom 8px </div>
-            <div class="oc-fs-11"> oc-area = main grid container </div>
-            <div class="oc-fs-11"> oc-bd-1 = 1px solid black border </div>
+            <div> oc-py-8 = padding-top 8px + padding-bottom 8px </div>
+            <div> oc-area = main grid container </div>
+            <div> oc-bd-1 = 1px solid black border </div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1">1/3</div>
@@ -106,9 +106,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex2 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example2 - semi-manual distribution / 半自動分配</div>
+        <div class="oc-bdl-4 oc-pl-4"> example2 - semi-manual distribution / 半自動分配</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-area-split-4 = split 4 columns </div>
+            <div> oc-area-split-4 = split 4 columns </div>
         </div>
         <div class="oc-py-8 oc-area oc-area-split-4">
             <div class="oc-bd-1">1/10</div>
@@ -139,10 +139,10 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex3 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example3 - custom distribution / 自定義分配</div>
+        <div class="oc-bdl-4 oc-pl-4"> example3 - custom distribution / 自定義分配</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-1 = 1/12 area</div>
-            <div class="oc-fs-11"> oc-10 = 10/12 area</div>
+            <div> oc-1 = 1/12 area</div>
+            <div> oc-10 = 10/12 area</div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1 oc-1">1/3</div>
@@ -159,7 +159,7 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex4 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example4 - 12 columns / 12欄分配設計</div>
+        <div class="oc-bdl-4 oc-pl-4"> example4 - 12 columns / 12欄分配設計</div>
             <div class="oc-py-8 oc-area">
                 <div class="oc-bd-1">1/12</div>
                 <div class="oc-bd-1">2/12</div>
@@ -193,11 +193,11 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex5 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example5 - rwd settings / 響應式設計</div>
+        <div class="oc-bdl-4 oc-pl-4"> example5 - rwd settings / 響應式設計</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> sm--oc-12 = 12/12 area in sm mode</div>
-            <div class="oc-fs-11"> md--oc-6 = 6/12 area in md mode</div>
-            <div class="oc-fs-11"> lg--oc-4 = 4/12 area in lg mode</div>
+            <div> sm--oc-12 = 12/12 area in sm mode</div>
+            <div> md--oc-6 = 6/12 area in md mode</div>
+            <div> lg--oc-4 = 4/12 area in lg mode</div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1 xs--oc-12 sm--oc-3 md--oc-6 lg--oc-4">xs--oc-12 sm--oc-3 md--oc-6 lg--oc-4</div>
@@ -214,9 +214,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex6 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example6 - alignment / 對齊</div>
+        <div class="oc-bdl-4 oc-pl-4"> example6 - alignment / 對齊</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-h-160 = height 160px </div>
+            <div> oc-h-160 = height 160px </div>
         </div>
         <div class="oc-py-8 oc-area oc-h-160">
             <div class="oc-bd-1 oc-center">oc-center</div>
@@ -241,10 +241,10 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex7 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example7 - custom width % / 自定義欄寬 %</div>
+        <div class="oc-bdl-4 oc-pl-4"> example7 - custom width % / 自定義欄寬 %</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-max-w-20 = max-width 20%</div>
-            <div class="oc-fs-11"> oc-w-auto = width auto</div>
+            <div> oc-max-w-20 = max-width 20%</div>
+            <div> oc-w-auto = width auto</div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1 oc-max-w-20">20%</div>
@@ -261,7 +261,7 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex8 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example8 - custom width px / 自定義欄寬 px</div>
+        <div class="oc-bdl-4 oc-pl-4"> example8 - custom width px / 自定義欄寬 px</div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1" style="max-width: 200px;">200px</div>
             <div class="oc-bd-1 oc-w-auto">auto</div>
@@ -277,7 +277,7 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex9 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example9 - nest structure / 巢狀結構</div>
+        <div class="oc-bdl-4 oc-pl-4"> example9 - nest structure / 巢狀結構</div>
         <div class="oc-py-8 oc-area">
             <div class="oc-area oc-bd-1 oc-6">
                 <div class="oc-bd-1 oc-4">oc-4</div>
@@ -299,12 +299,12 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex10 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example10 - rwd class / 響應式類別</div>
+        <div class="oc-bdl-4 oc-pl-4"> example10 - rwd class / 響應式類別</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> sm--oc-fs-30 = font-size 30px in sm mode</div>
-            <div class="oc-fs-11"> md--oc-fs-24 = font-size 24px in md mode</div>
-            <div class="oc-fs-11"> lg--oc-fs-20 = font-size 20px in lg mode</div>
-            <div class="oc-fs-11"> oc-fs-18 = font-size 18px</div>
+            <div> sm--oc-fs-30 = font-size 30px in sm mode</div>
+            <div> md--oc-fs-24 = font-size 24px in md mode</div>
+            <div> lg--oc-fs-20 = font-size 20px in lg mode</div>
+            <div> oc-fs-18 = font-size 18px</div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1 sm--oc-fs-30 md--oc-fs-24 lg--oc-fs-20">sm--oc-fs-30 md--oc-fs-24 lg--oc-fs-20</div>
@@ -321,9 +321,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex10 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example11 - rwd layout change / 響應式佈局排列改變</div>
+        <div class="oc-bdl-4 oc-pl-4"> example11 - rwd layout change / 響應式佈局排列改變</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-area-v = vertical arrangement</div>
+            <div> oc-area-v = vertical arrangement</div>
         </div>
         <div class="oc-py-8 oc-area  xs--oc-area-v sm--oc-area-v">
             <div class="oc-bd-1">1/3</div>
@@ -351,16 +351,16 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - text color, background color, border & outline color/
+        <div class="oc-bdl-4 oc-pl-4"> example1 - text color, background color, border & outline color/
             文字顏色,
             背景顏色, 框線顏色</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-color-txt-yellowgreen = text color is yellowgreen </div>
-            <div class="oc-fs-11"> oc-color-bg-black = background color is black </div>
-            <div class="oc-fs-11"> oc-bd-1 = border width is 1px </div>
-            <div class="oc-fs-11"> oc-color-bd-yellowgreen = border color is yellowgreen </div>
-            <div class="oc-fs-11"> oc-ol-4 = outline width is 4px </div>
-            <div class="oc-fs-11"> oc-color-ol-black = outline color is black </div>
+            <div> oc-color-txt-yellowgreen = text color is yellowgreen </div>
+            <div> oc-color-bg-black = background color is black </div>
+            <div> oc-bd-1 = border width is 1px </div>
+            <div> oc-color-bd-yellowgreen = border color is yellowgreen </div>
+            <div> oc-ol-4 = outline width is 4px </div>
+            <div> oc-color-ol-black = outline color is black </div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-color-txt-yellowgreen oc-color-bg-black oc-bd-1 oc-color-bd-yellowgreen oc-ol-4 oc-color-ol-black">
@@ -387,10 +387,10 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - padding
+        <div class="oc-bdl-4 oc-pl-4"> example1 - padding
         </div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-{p|px|py|pl|pt|pr|pb}-spacing. ex:oc-p-8. 8px paddings</div>
+            <div> oc-{p|px|py|pl|pt|pr|pb}-spacing. ex:oc-p-8. 8px paddings</div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-p-8 oc-bd-1 oc-color-bg-yellowgreen">
@@ -419,9 +419,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex2 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example2 - margin </div>
+        <div class="oc-bdl-4 oc-pl-4"> example2 - margin </div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-{m|mx|my|ml|mt|mr|mb}-spacing. ex:oc-mr-8. 8px margin right padding</div>
+            <div> oc-{m|mx|my|ml|mt|mr|mb}-spacing. ex:oc-mr-8. 8px margin right padding</div>
         </div>
         <div class="oc-py-8 oc-area">
             <div class="oc-bd-1 oc-py-8">
@@ -450,10 +450,10 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex3 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example3 - border & outline</div>
+        <div class="oc-bdl-4 oc-pl-4"> example3 - border & outline</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-{bd|bdl|bdt|bdr|bdb}-spacing. ex: oc-bd-2. 2px solid black border</div>
-            <div class="oc-fs-11"> oc-ol-spacing. ex: oc-ol-2. 2px solid black outline</div>
+            <div> oc-{bd|bdl|bdt|bdr|bdb}-spacing. ex: oc-bd-2. 2px solid black border</div>
+            <div> oc-ol-spacing. ex: oc-ol-2. 2px solid black outline</div>
         </div>
         <div class="oc-py-16 oc-area">
             <div class="oc-bd-1 oc-middle oc-p-4 oc-ol-8 oc-color-ol-yellowgreen">oc-bd-1 oc-ol-8</div>
@@ -470,10 +470,10 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex4 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example4 - width & height</div>
+        <div class="oc-bdl-4 oc-pl-4"> example4 - width & height</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-w-spacing. width</div>
-            <div class="oc-fs-11"> oc-h-spacing. height</div>
+            <div> oc-w-spacing. width</div>
+            <div> oc-h-spacing. height</div>
         </div>
         <div class="oc-py-16 oc-area oc-h-160">
             <div class="oc-bd-1 oc-p-4">
@@ -502,9 +502,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex5 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example5 - border radius</div>
+        <div class="oc-bdl-4 oc-pl-4"> example5 - border radius</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-r-spacing. radius value(px)</div>
+            <div> oc-r-spacing. radius value(px)</div>
         </div>
         <div class="oc-py-16 oc-area oc-h-160">
             <div class="oc-bd-1 oc-p-4 oc-center oc-middle oc-r-2">
@@ -545,9 +545,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex6 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example6 - 4 border radius corners</div>
+        <div class="oc-bdl-4 oc-pl-4"> example6 - 4 border radius corners</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> oc-{rtl|rtr|rbl|rbr}-spacing. radius value(px)</div>
+            <div> oc-{rtl|rtr|rbl|rbr}-spacing. radius value(px)</div>
         </div>
         <div class="oc-py-16 oc-area oc-h-160">
             <div class="oc-bd-1 oc-p-4 oc-center oc-middle oc-rtl-16">
@@ -599,11 +599,11 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - button</div>
+        <div class="oc-bdl-4 oc-pl-4"> example1 - button</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> button = template button </div>
-            <div class="oc-fs-11"> data-class = additional classes </div>
-            <div class="oc-fs-11"> data-hover = hover classes </div>
+            <div> button = template button </div>
+            <div> data-class = additional classes </div>
+            <div> data-hover = hover classes </div>
         </div>
         <div class="oc-py-8">
             <template class="button" onclick="simpleBtn(1,window,window.atob)"
@@ -626,9 +626,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex2 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example2 - radio buttons</div>
+        <div class="oc-bdl-4 oc-pl-4"> example2 - radio buttons</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> data-paramns = custom array to pass into template content </div>
+            <div> data-paramns = custom array to pass into template content </div>
         </div>
         <div class="oc-py-8">
             <template class="radio_buttons"
@@ -643,9 +643,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex3 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example3 - checkbox buttons</div>
+        <div class="oc-bdl-4 oc-pl-4"> example3 - checkbox buttons</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> data-paramns = custom array to pass into template content </div>
+            <div> data-paramns = custom array to pass into template content </div>
         </div>
         <div class="oc-py-8">
             <template class="checkbox_buttons"
@@ -660,11 +660,11 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex4 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example4 - alert dialog</div>
+        <div class="oc-bdl-4 oc-pl-4"> example4 - alert dialog</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> 1.define button as below</div>
-            <div class="oc-fs-11"> 2.define alertBox function in ocfw.func.js</div>
-            <div class="oc-fs-11"> 3.design alert dialog html in alert_dialog.js</div>
+            <div> 1.define button as below</div>
+            <div> 2.define alertBox function in ocfw.func.js</div>
+            <div> 3.design alert dialog html in alert_dialog.js</div>
         </div>
         <div class="oc-py-8">
             <template class="button" onclick="alertBox('cool test 1')">alert-box-1</template>
@@ -681,11 +681,11 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex5 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example5 - comfirm dialog</div>
+        <div class="oc-bdl-4 oc-pl-4"> example5 - comfirm dialog</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11"> 1.define button as below</div>
-            <div class="oc-fs-11"> 2.define confirmBox function in ocfw.func.js</div>
-            <div class="oc-fs-11"> 3.design confirm dialog html in confirm_dialog.js</div>
+            <div> 1.define button as below</div>
+            <div> 2.define confirmBox function in ocfw.func.js</div>
+            <div> 3.design confirm dialog html in confirm_dialog.js</div>
         </div>
         <div class="oc-py-8">
             <template class="button" onclick="confirmBox('cool test A - comfirm box')">comfirm-box-1</template>
@@ -698,9 +698,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex6 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example6 - select</div>
+        <div class="oc-bdl-4 oc-pl-4"> example6 - select</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11">select</div>
+            <div>select</div>
         </div>
         <div class="oc-py-8">
             <template class="select" data-params="['運動 execise','吃飯 eat','睡覺 sleep']"></template>
@@ -713,9 +713,9 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex7 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example7 - toggle</div>
+        <div class="oc-bdl-4 oc-pl-4"> example7 - toggle</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11">toggle</div>
+            <div>toggle</div>
         </div>
         <div class="oc-py-8">
             <template class="toggle" data-params="['toggle','tv']"></template>
@@ -728,10 +728,10 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex8 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example8 - image</div>
+        <div class="oc-bdl-4 oc-pl-4"> example8 - image</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
-            <div class="oc-fs-11">data-src = image source</div>
-            <div class="oc-fs-11">data-size = image bakcground-size style </div>
+            <div>data-src = image source</div>
+            <div>data-size = image bakcground-size style </div>
         </div>
         <div class="oc-area oc-py-8">
             <template class="image" data-src="./assets/imgs/test.png" data-class="oc-h-160" data-size="auto">
@@ -777,7 +777,7 @@ export let intro = `
         <div class="oc-py-24"></div>
 
         <!-- ex1 -->
-        <div class="oc-fs-12 oc-bdl-4 oc-pl-4"> example1 - carousel</div>
+        <div class="oc-bdl-4 oc-pl-4"> example1 - carousel</div>
         <div class="oc-bdl-1 oc-pl-4 oc-p-8">
             advanced component
         </div>
