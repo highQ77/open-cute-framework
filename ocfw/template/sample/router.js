@@ -129,15 +129,20 @@ export let router = {
         }
 
         function updateView(pageId) {
-            // active style
+            // prevent screen flash
+            rc.updateUI(routerView);
+            // links handle
             [...ele.children].forEach((link, i, arr) => {
                 link.classList.remove(ele.dataset.active)
                 if (link.dataset.to == pageId) {
                     routerView.innerHTML = html[pageId]
                     rc.updateUI(routerView)
+                    // active style
                     requestAnimationFrame(() => link.classList.add(ele.dataset.active))
                 }
             })
+            // textarea fix
+            rc.textAreaFix()
         }
 
     }

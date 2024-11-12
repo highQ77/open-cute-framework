@@ -477,6 +477,7 @@ window.onclick = e => {
 export let rc = {
     updateUI,
     appendTpl,
+    textAreaFix,
     initRouter(htmlIndex) {
         // debug mode
         config.debug && document.body.classList.add('oc-debug')
